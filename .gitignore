@@ -1,0 +1,9 @@
+*.DS_Store
+/bower_components/*
+/node_modules/*
+.sass-cache
+/img/art/*
+/analytics/*
+/perch/config/*
+/perch/core/*
+perch_v2.8.6.zip
