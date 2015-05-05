@@ -22,7 +22,7 @@ class PerchFeather_Quill extends PerchFeather
 				));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>$this->path.'/css/style.css',
+					'href'=>$this->root.'/css/style.css',
 					'type'=>'text/css'
 				));
 		
