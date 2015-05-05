@@ -9,11 +9,11 @@ class PerchFeather_Quill extends PerchFeather
 		$out = array();
 
 
-		// $out[] = $this->_single_tag('link', array(
-		// 			'rel'=>'stylesheet',
-		// 			'href'=>'//fonts.googleapis.com/css?family=Droid+Sans:400,700',
-		// 			'type'=>'text/css'
-		// 		));
+		$out[] = $this->_single_tag('link', array(
+					'rel'=>'stylesheet',
+					'href'=>'//fonts.googleapis.com/css?family=Oswald:400,300,700',
+					'type'=>'text/css'
+				));
 
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
