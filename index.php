@@ -2,8 +2,6 @@
 	
 	include('perch/runtime.php'); 
 
-	
-
 	perch_layout('global.header', array(
 			'title' => '',
 			'h1_header' => 'jennifer.codes - homepage'
