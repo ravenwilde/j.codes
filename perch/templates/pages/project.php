@@ -14,6 +14,8 @@
 
     <?php perch_content('Intro'); ?>
 
+    <?php perch_categories(); ?>
+
     <?php perch_get_javascript(); ?>
 </body>
 </html>
