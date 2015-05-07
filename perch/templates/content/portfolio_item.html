@@ -1,0 +1,43 @@
+<div class="portfolio-item">
+<!-- portfolio_item.html-->
+
+	<h1><perch:content id="title" type="text" label="Title" required="true" title="true" /></h1>
+	
+	<perch:content id="desc" type="textarea" label="Description" markdown="true" editor="markitup" />
+	
+	<ul>
+		<li>Client: <perch:content id="client" type="text" label="Client" required="true" /></li>
+		<li>Year: <perch:content id="year" type="text" label="Year" required="true" /></li>
+	</ul>
+
+	<perch:repeater id="gallery" label="Images for Lightbox" >
+		<perch:before>
+			<div class="gallery">
+		</perch:before>
+			<a href="<perch:content id="image" type="image" label="Image" width="1024" />" >
+				<img 
+				src="<perch:content id="image" type="image" label="Image" width="200" height="200" crop="true" />" 
+				data-big="<perch:content id="image" type="image" label="Image"/>" 
+				data-title="<perch:content id="imagetitle" type="text" label="Image Title" required="true" title="true" />" 
+				data-description="<perch:content id="imagedesc" type="text" label="Image description" required="true"/>" />
+			</a>
+		<perch:after>
+			</div>
+		</perch:after>
+	</perch:repeater>
+
+	<perch:content id="listimage" type="image" label="Image for listing page" width="300" height="200" crop="true" suppress="true" />
+	<perch:content id="slug" for="title" type="slug" suppress="true" />
+
+	<perch:categories id="Skills" label="Skillz" set="skills" required="true">
+      <perch:before>
+        <h3>Mad Skillz</h3>
+        <ul>
+      </perch:before>
+          <li><a href="/category.php?cat=<perch:category id="catPath" />"><perch:category id="catTitle" /></a></li>
+      <perch:after>
+        </ul>
+      </perch:after>
+    </perch:categories>
+
+</div>
