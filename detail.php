@@ -12,9 +12,9 @@
     <?php perch_pages_navigation(array('levels'=>2)); ?>
 
 	<?php
-	    perch_content_custom('Portfolio', array(
-	      'page' => '/portfolio.php',
-	      'template' => 'portfolio_item.html',
+	    perch_content_custom('Project', array(
+	      'page' => '/projects.php',
+	      'template' => 'project_item.html',
 	      'filter' => 'slug',
 	      'match' => 'eq',
 	      'value' => perch_get('s'),

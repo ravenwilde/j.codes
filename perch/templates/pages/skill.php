@@ -20,14 +20,18 @@
     <!-- Links to Projects tagged with related category -->
     <?php 
 		perch_content_create('Skill', array(
-	      'template'   => 'category_skill.html',
+	      'template'  => 'category_skill.html',
 	      'edit-mode' => 'singlepage',
-		));
-
-		perch_content_custom('Skill', array(
-			'template' => 'category_skill.html',
 			));
+
+		perch_content_custom('Project', array(
+	        'template' => 'project_listing.html',
+	        'page'=>'/project.php',
+	        'category' => 'skills/html5',
+      		));
     ?>
+
+
 
     <?php perch_get_javascript(); ?>
 </body>

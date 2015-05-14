@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-	<title>Portfolio</title>
+	<title>Jennifer Codes</title>
 	<?php perch_get_css(); ?>
 </head>
 <body>
@@ -13,9 +13,9 @@
       perch_category(perch_get('cat'),array(
         'template'=>'category_single.html'
       ));
-      perch_content_custom('Portfolio', array(
-        'template' => 'portfolio_listing.html',
-        'page'=>'/portfolio.php',
+      perch_content_custom('Project', array(
+        'template' => 'project_listing.html',
+        'page'=>'/projects.php',
         'category' => perch_get('cat'),
       ));
     } else {
