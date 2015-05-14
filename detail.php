@@ -21,7 +21,7 @@
 	      'count' => 1,
 	    ));
     ?>
-<?php PerchUtil::output_debug(); ?>
+
     <?php perch_get_javascript(); ?>
 </body>
 </html>
