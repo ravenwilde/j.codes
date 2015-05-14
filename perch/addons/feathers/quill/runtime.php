@@ -15,16 +15,16 @@ class PerchFeather_Quill extends PerchFeather
 					'type'=>'text/css'
 				));
 
-		$out[] = $this->_single_tag('link', array(
-					'rel'=>'stylesheet',
-					'href'=>$this->root.'/bower_components/normalize.css/normalize.css',
-					'type'=>'text/css'
-				));
-		$out[] = $this->_single_tag('link', array(
-					'rel'=>'stylesheet',
-					'href'=>$this->root.'/css/style.css',
-					'type'=>'text/css'
-				));
+		// $out[] = $this->_single_tag('link', array(
+		// 			'rel'=>'stylesheet',
+		// 			'href'=>$this->root.'/bower_components/normalize.css/normalize.css',
+		// 			'type'=>'text/css'
+		// 		));
+		// $out[] = $this->_single_tag('link', array(
+		// 			'rel'=>'stylesheet',
+		// 			'href'=>$this->root.'/css/style.css',
+		// 			'type'=>'text/css'
+		// 		));
 		
 		if (!$this->component_registered('html5shiv')) {
 			$out[] = $this->_conditional_comment('lt IE 9', $this->_script_tag(array(
