@@ -7,4 +7,3 @@
 </head>
 <body>
 <div class="main-container">
-<h1><?php perch_layout_var('h1_header'); ?></h1>
