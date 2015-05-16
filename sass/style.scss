@@ -1,8 +1,11 @@
- @import "bourbon/bourbon";
+@import "bourbon/bourbon";
 @import "neat/neat";
 
+@import "jennifercodes/variables";
 @import "jennifercodes/typography";
 
-.main-container {
+.main-container,
+.container {
 	@include outer-container;
 }
+
