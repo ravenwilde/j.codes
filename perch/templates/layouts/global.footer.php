@@ -1,7 +1,8 @@
 <footer>
-	<h5>Footer Links and Stuff</h5>
+	<div class="container">
+		<h5>Footer Links and Stuff</h5>
+	</div>
 </footer>
-</div><!-- .main-container -->
 <?php perch_get_javascript(); ?>
 
 </body>

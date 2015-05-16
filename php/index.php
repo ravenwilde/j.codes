@@ -25,7 +25,7 @@
 				perch_content_custom('Project', array(
 			        'template' => 'project_listing.html',
 			        'page'=>'/projects.php',
-			        'category' => 'skills/javascript',
+			        'category' => 'skills/php',
 		      		));
 		    ?>
 		</div>

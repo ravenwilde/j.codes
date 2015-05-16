@@ -1,9 +1,7 @@
 <?php 	
 	include('perch/runtime.php'); 
-	perch_layout('global.header', array(
-			'title' => ''
-		));
 ?>
+<?php perch_layout('global.header'); ?>
 <section id="hero">
 	<div class="container">
 		<h1><span>Hi!</span> my name is <span>Jennifer A. Scroggins</span></h1>
@@ -30,8 +28,7 @@
 	      'template' => 'project_listing.html'
 	    ));
 	?>
+	<p><a href="projects">View All Projects</a></p>
 	</div>
 </section>
-<?php
-	perch_layout('global.footer'); 
-?>
+<?php perch_layout('global.footer'); ?>
