@@ -1,7 +1,31 @@
 body {
 //	@include highlight-breakpoint;
 }
+header {
+	clear: both;
+}
 .container {
 	@include outer-container;
 	padding: $base-spacing ($base-spacing/2);
+}
+// Home Page
+#hero {
+	p {
+		font-size: em(42);
+		font-weight: 300;
+		line-height: 1.25;
+	}
+}
+// Skill Pages
+.codeSampleList {
+	list-style: none;
+	padding: 0;
+	&_viewLink {
+		display: block;
+		margin: ($base-spacing/2) 0;
+		a:after {
+			content: ">";
+			margin-left: .25em;
+		}
+	}
 }

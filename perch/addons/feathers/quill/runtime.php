@@ -15,7 +15,7 @@ class PerchFeather_Quill extends PerchFeather
 				));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>'//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700',
+					'href'=>'//fonts.googleapis.com/css?family=Roboto:400,300,500,700',
 					'type'=>'text/css'
 				));
 		$out[] = $this->_single_tag('link', array(

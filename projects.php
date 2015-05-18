@@ -3,12 +3,12 @@
   perch_layout('global.header'); 
   perch_layout('global.nav');
   ?>
-    <section>
+    <header>
       <div class="container">
         <h1><?php perch_content('Main heading'); ?></h1>
         <?php perch_content('Intro'); ?>  
       </div>
-    </section>
+    </header>
     <section>
       <div class="container">
         <?php
