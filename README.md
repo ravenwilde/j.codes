@@ -9,3 +9,9 @@ Following subdirs each contain a page with links to relevant gists and a list of
 * /php
 * /javascript
 * /sass
+
+## Notes to Self:
+
+### Prior to deployment on production:
+
+* switch jquery to hosted CDN

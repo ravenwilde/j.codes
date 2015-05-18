@@ -95,12 +95,60 @@ cite {
   cite:before {
     content: "\2014 \00A0"; }
 
-.main-container,
+nav.global-nav,
+nav.global-nav-skills {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%; }
+  nav.global-nav:last-child,
+  nav.global-nav-skills:last-child {
+    margin-right: 0; }
+  nav.global-nav .container,
+  nav.global-nav-skills .container {
+    padding: 0; }
+  nav.global-nav ul,
+  nav.global-nav-skills ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  nav.global-nav a,
+  nav.global-nav-skills a {
+    display: block;
+    padding: 0.75em;
+    text-align: center; }
+
+nav.global-nav {
+  background-color: #DDD; }
+  nav.global-nav li {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 47.58542%; }
+    nav.global-nav li:last-child {
+      margin-right: 0; }
+
+nav.global-nav-skills {
+  background-color: #c6c6c6; }
+  @media screen and (min-width: 40em) {
+    nav.global-nav-skills .menu-toggle {
+      display: none; } }
+  nav.global-nav-skills ul {
+    display: none; }
+    @media screen and (min-width: 40em) {
+      nav.global-nav-skills ul {
+        display: block; } }
+    nav.global-nav-skills ul.active {
+      display: block; }
+      @media screen and (min-width: 40em) {
+        nav.global-nav-skills ul.active {
+          display: block; } }
+
 .container {
   max-width: 80em;
   margin-left: auto;
-  margin-right: auto; }
-  .main-container::after,
+  margin-right: auto;
+  padding: 1.5em 0.75em; }
   .container::after {
     clear: both;
     content: "";

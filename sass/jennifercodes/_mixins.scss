@@ -1,0 +1,30 @@
+@mixin highlight-breakpoint {
+
+	background-color: darkred;
+
+	@include media($mobile-large-screen-up) {
+		background-color: red;
+	}
+	@include media($tablet-small-screen-up) {
+		background-color: orange;
+	}
+	@include media($medium-screen-up) {
+		background-color: yellow;
+	}
+	@include media($medium-large-screen-up) {
+		background-color: greenyellow;
+	}
+	@include media($large-screen-up) {
+		background-color: limegreen;
+	}
+	@include media($x-large-screen-up) {
+		background-color: greenyellow;
+	}
+	@include media($xx-large-screen-up) {
+		background-color: deepskyblue;
+	}
+	@include media($super-large-screen-up) {
+		background-color: dodgerblue;
+	}
+
+}

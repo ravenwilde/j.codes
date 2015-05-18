@@ -1,0 +1,48 @@
+$global-navigation-background: $light-gray;
+$global-navigation-color: $blue;
+$global-skills-navigation-background: shade($light-gray,10);
+$global-skills-navigation-color: $blue;
+
+nav.global-nav,
+nav.global-nav-skills {
+	@include span-columns(6);
+	.container {
+		padding: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	a {
+		display: block;
+		padding: ($base-spacing/2);
+		text-align: center;
+	}
+}
+nav.global-nav {
+	background-color: $global-navigation-background;
+	li {
+		@include span-columns(3);
+	}
+}
+nav.global-nav-skills {
+	background-color: $global-skills-navigation-background;
+	.menu-toggle {
+		@include media($medium-screen-up) {
+			display: none;
+		}
+	}
+	ul {
+		display: none;
+		@include media($medium-screen-up) {
+			display: block;
+		}
+		&.active {
+			display: block;
+			@include media($medium-screen-up) {
+				display: block;
+			}
+		}
+	}
+}

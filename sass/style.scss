@@ -1,11 +1,10 @@
 @import "bourbon/bourbon";
+
+@import "jennifercodes/grid_settings";
 @import "neat/neat";
 
 @import "jennifercodes/variables";
+@import "jennifercodes/mixins";
 @import "jennifercodes/typography";
-
-.main-container,
-.container {
-	@include outer-container;
-}
-
+@import "jennifercodes/navigation";
+@import "jennifercodes/layouts";
