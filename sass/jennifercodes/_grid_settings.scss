@@ -24,8 +24,8 @@ $super-large-screen: em(1280);
 $mobile-large-screen-up: new-breakpoint(min-width $mobile-large-screen 6);
 $tablet-small-screen-up: new-breakpoint(min-width $tablet-small-screen 6);
 
-$medium-screen-up: new-breakpoint(min-width $medium-screen 8);
-$medium-large-screen-up: new-breakpoint(min-width $medium-large-screen 8);
+$medium-screen-up: new-breakpoint(min-width $medium-screen 12);
+$medium-large-screen-up: new-breakpoint(min-width $medium-large-screen 12);
 
 $large-screen-up: new-breakpoint(min-width $large-screen 12);
 $x-large-screen-up: new-breakpoint(min-width $x-large-screen 12);
@@ -34,6 +34,6 @@ $super-large-screen-up: new-breakpoint(min-width $super-large-screen 12);
 
 
 // Override Bourbon's flex-grid variables so they match Neat
-$fg-column: $column;
-$fg-gutter: $gutter;
-$fg-max-columns: 12;
+$fg-column: $column !global;
+$fg-gutter: $gutter !global;
+$fg-max-columns: 12 !global;

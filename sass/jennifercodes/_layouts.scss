@@ -16,6 +16,52 @@ header {
 		line-height: 1.25;
 	}
 }
+// Project Listing
+.projectList {
+	list-style: none;
+	padding: 0;
+	li {
+		position: relative;
+		padding: 0;
+		min-height: em(200);
+		margin-bottom: $base-spacing;
+		background-color: $black;
+		@include card(1);
+		@include span-columns(6);
+		@include media($tablet-small-screen-up) {
+			@include span-columns(3);
+			@include omega(2n);
+		}
+		@include media($large-screen-up) {
+			@include omega-reset(2n);
+			@include span-columns(4);
+			@include omega(3n);
+		}
+		a {
+			color: $white;
+			padding: 0;
+			display: block;
+		}
+		h2 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-family: $body-sans-serif;
+			font-weight: 300;
+			font-size: $h3-font-size;
+			margin:0;
+			width: 100%;
+			padding: ($base-spacing/4) .2em;
+			//line-height: 1.5;
+			$gradient-top: rgba(0,0,0,.5);
+			$gradient-bottom: rgba(0,0,0,.5);
+			@include background(linear-gradient($gradient-top 0, $gradient-bottom 80%) top repeat);
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
 // Skill Pages
 .codeSampleList {
 	list-style: none;

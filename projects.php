@@ -9,18 +9,16 @@
         <?php perch_content('Intro'); ?>  
       </div>
     </header>
-    <section>
-      <div class="container">
-        <?php
-          perch_content_create('Project', array(
-            'template'   => 'project_item.html',
-            'multiple'    => true,
-            'edit-mode' => 'listdetail',
-          ));
-          perch_content_custom('Project', array(
-            'template' => 'project_listing.html',
-          ));
-        ?>
-      </div>
-    </section>    
+    
+    <?php
+      perch_content_create('Project', array(
+        'template'   => 'project_item.html',
+        'multiple'    => true,
+        'edit-mode' => 'listdetail',
+      ));
+      perch_content_custom('Project', array(
+        'template' => 'project_listing.html',
+      ));
+    ?>
+       
 <?php perch_layout('global.footer'); ?>
