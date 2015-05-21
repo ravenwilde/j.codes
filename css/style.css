@@ -131,6 +131,10 @@ nav.global-nav-skills {
   nav.global-nav .container,
   nav.global-nav-skills .container {
     padding: 0; }
+    @media screen and (min-width: 40em) {
+      nav.global-nav .container,
+      nav.global-nav-skills .container {
+        padding: 0 0.75em; } }
   nav.global-nav ul,
   nav.global-nav-skills ul {
     margin: 0;
@@ -141,6 +145,10 @@ nav.global-nav-skills {
     display: block;
     padding: 0.75em;
     text-align: center; }
+    @media screen and (min-width: 40em) {
+      nav.global-nav a,
+      nav.global-nav-skills a {
+        text-align: left; } }
 
 nav.global-nav {
   background-color: #DDD; }
@@ -151,22 +159,66 @@ nav.global-nav {
     width: 47.58542%; }
     nav.global-nav li:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 40em) {
+      nav.global-nav li {
+        width: auto; } }
 
 nav.global-nav-skills {
   background-color: #c6c6c6; }
-  @media screen and (min-width: 40em) {
-    nav.global-nav-skills .menu-toggle {
-      display: none; } }
+  nav.global-nav-skills .menu-toggle {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
+    text-align: left;
+    padding-left: 20%; }
+    nav.global-nav-skills .menu-toggle:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 40em) {
+      nav.global-nav-skills .menu-toggle {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%;
+        text-align: right;
+        cursor: default;
+        padding-left: 0; }
+        nav.global-nav-skills .menu-toggle:last-child {
+          margin-right: 0; }
+        nav.global-nav-skills .menu-toggle:hover {
+          color: #477DCA; } }
   nav.global-nav-skills ul {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%;
     display: none; }
+    nav.global-nav-skills ul:last-child {
+      margin-right: 0; }
     @media screen and (min-width: 40em) {
       nav.global-nav-skills ul {
-        display: block; } }
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%; }
+        nav.global-nav-skills ul:last-child {
+          margin-right: 0; } }
     nav.global-nav-skills ul.active {
       display: block; }
       @media screen and (min-width: 40em) {
         nav.global-nav-skills ul.active {
           display: block; } }
+  nav.global-nav-skills li {
+    float: left;
+    display: block;
+    margin-right: 4.82916%;
+    width: 100%; }
+    nav.global-nav-skills li:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 40em) {
+      nav.global-nav-skills li {
+        width: auto;
+        float: left; } }
 
 header {
   clear: both; }

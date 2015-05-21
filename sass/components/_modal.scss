@@ -1,5 +1,5 @@
 .modal {
-  @extend .z-depth-4;
+  // @extend .z-depth-4;
 
   display: none;
   position: fixed;
@@ -17,9 +17,9 @@
   @include transform(translate(0));
   will-change: top, opacity;
 
-  @media #{$medium-and-down} {
-   width: 80%;
-  }
+  // @media #{$medium-and-down} {
+  //  width: 80%;
+  // }
 
   h1,h2,h3,h4 {
     margin-top: 0;

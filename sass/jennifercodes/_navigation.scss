@@ -9,6 +9,9 @@ nav.global-nav-skills {
 	@include clearfix;
 	.container {
 		padding: 0;
+		@include media($medium-screen-up) {
+			padding: 0 ($base-spacing/2);
+		}
 	}
 	ul {
 		margin: 0;
@@ -19,31 +22,54 @@ nav.global-nav-skills {
 		display: block;
 		padding: ($base-spacing/2);
 		text-align: center;
+		@include media($medium-screen-up) {
+			text-align: left;
+		}
 	}
 }
 nav.global-nav {
 	background-color: $global-navigation-background;
 	li {
 		@include span-columns(3);
+		@include media($medium-screen-up) {
+			width: auto;
+		}
 	}
 }
 nav.global-nav-skills {
 	background-color: $global-skills-navigation-background;
 	.menu-toggle {
+		@include span-columns(6);
+		text-align: left;
+		padding-left: 20%;
 		@include media($medium-screen-up) {
-			display: none;
+			@include span-columns(2);
+			text-align: right;
+			cursor: default;
+			padding-left: 0;
+			&:hover {
+				color: $blue;
+			}
 		}
 	}
 	ul {
+		@include span-columns(6);
 		display: none;
 		@include media($medium-screen-up) {
-			display: block;
+			@include span-columns(10);
 		}
 		&.active {
 			display: block;
 			@include media($medium-screen-up) {
 				display: block;
 			}
+		}
+	}
+	li {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			width: auto;
+			float: left;
 		}
 	}
 }
