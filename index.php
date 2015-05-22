@@ -4,7 +4,7 @@
 <?php perch_layout('global.header'); ?>
 <section id="hero">
 	<div class="container">
-	<?php perch_content('Hero Photo'); ?>
+		<?php perch_content('Hero Photo'); ?>
 		<h1><span>Hi!</span> my name is <span>Jennifer A. Scroggins</span></h1>
 		<p>I am a web designer &amp; developer located in Ann Arbor, MI</p>
 	</div>

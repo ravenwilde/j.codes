@@ -5,6 +5,9 @@ $base-font-family: $body-sans-serif;
 $header-font-family: $headline-sans-serif;
 $base-font-size: 1em;
 
+$modular-scale-ratio: $golden !global;
+$modular-scale-base: 1em;
+
 // Line height
 $base-line-height: 1.5;
 $header-line-height: 1.5;

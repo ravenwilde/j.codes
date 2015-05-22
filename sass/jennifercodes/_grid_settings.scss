@@ -6,7 +6,7 @@ $gutter: golden-ratio(1em, 1);
 $grid-columns: 6;
 $max-width: em(1280);
 
-//$visual-grid: true !global;s
+$visual-grid: true !global;
 $visual-grid-color: #444 !global;
 $visual-grid-index: front !global;
 $visual-grid-opacity: 0.3 !global;
@@ -21,15 +21,24 @@ $x-large-screen: em(970);
 $xx-large-screen: em(1088);
 $super-large-screen: em(1280);
 
+// darkred
+// red
 $mobile-large-screen-up: new-breakpoint(min-width $mobile-large-screen 6);
+// orange
 $tablet-small-screen-up: new-breakpoint(min-width $tablet-small-screen 6);
 
+// yellow
 $medium-screen-up: new-breakpoint(min-width $medium-screen 12);
+// greenyellow
 $medium-large-screen-up: new-breakpoint(min-width $medium-large-screen 12);
 
+// limegreen
 $large-screen-up: new-breakpoint(min-width $large-screen 12);
+// greenyellow
 $x-large-screen-up: new-breakpoint(min-width $x-large-screen 12);
+// deepskyblue
 $xx-large-screen-up: new-breakpoint(min-width $xx-large-screen 12);
+// dodgerblue
 $super-large-screen-up: new-breakpoint(min-width $super-large-screen 12);
 
 
