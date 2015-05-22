@@ -6,7 +6,7 @@ $gutter: golden-ratio(1em, 1);
 $grid-columns: 6;
 $max-width: em(1280);
 
-$visual-grid: true !global;
+//$visual-grid: true !global;
 $visual-grid-color: #444 !global;
 $visual-grid-index: front !global;
 $visual-grid-opacity: 0.3 !global;
@@ -43,6 +43,6 @@ $super-large-screen-up: new-breakpoint(min-width $super-large-screen 12);
 
 
 // Override Bourbon's flex-grid variables so they match Neat
-$fg-column: $column !global;
-$fg-gutter: $gutter !global;
-$fg-max-columns: 12 !global;
+// $fg-column: $column !global;
+// $fg-gutter: $gutter !global;
+// $fg-max-columns: 12 !global;

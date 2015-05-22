@@ -19,8 +19,9 @@ $base-z-index: 0;
 
 // Colors
 $white: #ffffff;
-$black: #000000;
+$black: tint(#000000, 10%);
 $blue: #477DCA;
+
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
@@ -28,12 +29,25 @@ $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
 
+// Miami Sunset Palette
+$texas-rose: #FFAA5C;
+$new-york-pink: #DA727E;
+$turkish-rose: #AC6C82;
+$smoky: #685C79;
+$blue-bayoux: #455C7B;
+
 // Background Color
 $base-background-color: white;
 
 // Font Colors
-$base-font-color: black;
-$base-accent-color: $blue;
+$base-font-color: $black;
+$base-accent-color: $smoky;
+$light-accent-color: $texas-rose;
+
+// Background Colors
+$light-background-color: $new-york-pink;
+$middle-background-color: $turkish-rose;
+$dark-background-color: $blue-bayoux;
 
 // Link Colors
 $base-link-color: $base-accent-color;

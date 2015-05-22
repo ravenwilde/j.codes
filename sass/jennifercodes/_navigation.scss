@@ -1,7 +1,7 @@
-$global-navigation-background: $light-gray;
-$global-navigation-color: $blue;
-$global-skills-navigation-background: shade($light-gray,10);
-$global-skills-navigation-color: $blue;
+$global-navigation-background: $light-background-color;
+$global-navigation-color: $white;
+$global-skills-navigation-background: $middle-background-color;
+$global-skills-navigation-color: $white;
 
 nav.global-nav,
 nav.global-nav-skills {
@@ -22,6 +22,7 @@ nav.global-nav-skills {
 		display: block;
 		padding: ($base-spacing/2);
 		text-align: center;
+		color: $global-navigation-color;
 		@include media($medium-screen-up) {
 			text-align: left;
 		}

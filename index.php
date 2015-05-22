@@ -29,7 +29,12 @@
 	      'template' => 'project_listing.html'
 	    ));
 	?>
-	<p><a href="projects">View All Projects</a></p>
+	<p class="all-projects-link"><a href="projects">View All Projects</a></p>
+	</div>
+</section>
+<section id="contact-info">
+	<div class="container">
+		<h2>Contact Me</h2>
 	</div>
 </section>
 <?php perch_layout('global.footer'); ?>

@@ -1,17 +1,11 @@
-
 <perch:before>
-<section>
-    <div class="container">
-		<ul class="projectList">
-		</perch:before>
-		<li>
-			<a href="/detail/<perch:content id="slug" for="title" type="slug" />">
-				<img src="<perch:content id="listimage" type="image" label="Image for listing page" crop="true" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
-				<h2><perch:content id="title" type="text" label="Title" required="true" title="true"/></h2>
-			</a>
-		</li>
-		<perch:after>
-		</ul>
+    <div class="projectList">
+</perch:before>
+<article class="projectList-article">
+	<a href="/detail/<perch:content id="slug" for="title" type="slug" />"><h2><perch:content id="title" type="text" label="Title" required="true" title="true"/></h2></a>
+	<a href="/detail/<perch:content id="slug" for="title" type="slug" />"><img src="<perch:content id="listimage" type="image" label="Image for listing page" crop="true" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" /></a>
+</article>
+<perch:after>
     </div>
-</section>
-		</perch:after> 	
+</perch:after>
+	
