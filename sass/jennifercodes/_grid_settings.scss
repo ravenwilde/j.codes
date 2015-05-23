@@ -6,7 +6,7 @@ $gutter: golden-ratio(1em, 1);
 $grid-columns: 6;
 $max-width: em(1280);
 
-//$visual-grid: true !global;
+ $visual-grid: true !global;
 $visual-grid-color: #444 !global;
 $visual-grid-index: front !global;
 $visual-grid-opacity: 0.3 !global;

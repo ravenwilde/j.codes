@@ -1,31 +1,56 @@
 //----------------
 // Home Page
 #hero {
+	//background-color: $light-accent-color;
+	.vertical-center {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(12);
+			@include display(flex);
+		    @include flex-direction(row);
+		    @include align-items(center);
+		    margin-top: $h1-margin-top;
+		    margin-bottom: $h1-margin-bottom;
+		}
+	}
 	img {
 		margin-top: $h1-margin-top;
-		@include span-columns(4);
+		@include span-columns(4 of 6);
 		@include shift(1);
 		@include media($mobile-large-screen-up) {
-			@include span-columns(2);
+			@include span-columns(2 of 6);
 			@include shift(2);
 		}
 		@include media($medium-screen-up) {
-			@include span-columns(3);
+			@include span-columns(3 of 12);
 			@include shift(2);
+			margin-top:0;
 		}
 	}
 	h1 {
 		font-weight: 400;
 		text-align: center;
-		@include span-columns(6);
+		@include span-columns(6 of 6);
 		@include media($medium-screen-up) {
-			@include span-columns(6);
+			@include span-columns(7 of 12);
+			@include omega;
+			text-align: left;
+			margin-top:0;
+			margin-bottom: 0;
 		}
+	  	@include media($large-screen-up) {
+	      font-size: $h1-font-size-mobile;
+	      line-height: $h1-line-height-mobile;
+	    }
+      	@include media($x-large-screen-up) {
+	      font-size: $h1-font-size;
+	      line-height: $h1-line-height;
+	    }
 		span:first-child {
 			@include media($tablet-small-screen-up) {
 				font-size: modular-scale(1, $h1-font-size-mobile);				
 			}
-			@include media($large-screen-up) {
+			@include media($x-large-screen-up) {
 				font-size: modular-scale(1, $h1-font-size);
 			}
 		}
@@ -43,15 +68,32 @@
 			@include span-columns(6);
 			@include shift(3);
 		}
+		@include media($x-large-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
 		@include media($large-screen-up) {
 			font-size: em(42);
 		}
+		span {
+			display: block;
+		}
 	}
 }
+
 #skill-links {
+	//background-color: $light-background-color;
+	.container {
+		padding: $base-spacing 0;
+	}
 	h2 {
 		margin-right: ($base-spacing/4);
 		margin-left: ($base-spacing/4);
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(2);
+		}
 	}
 	ul {
 		list-style: none;
@@ -65,27 +107,55 @@
 				line-height: $h2-line-height;
 			}
 			@for $i from 1 through 6 {
-			  &:nth-child(#{$i}) {
-			  	@include span-columns((6-$i));
-				@include shift($i);
-				@include omega;
-				@include media($medium-screen-up) {
-					@include span-columns((9-$i));
-					@include shift((2+($i*2)));
+			    &:nth-child(#{$i}) {
+				  	@include span-columns((6-$i));
+					@include shift($i);
 					@include omega;
-				}
-			  }				
+					@include media($medium-screen-up) {
+						@include span-columns((9-($i*2)));
+						@include shift((2+($i*2)));
+						@include omega;
+					}
+			    }				
 			}
 		}
 	}
 }
 
 #project-links {
-	background-color: $dark-background-color;
+	//background-color: $dark-background-color;
+	h2 {
+		text-align: right;
+		@include span-columns(5);
+		@include shift(1);
+		@include media($medium-screen-up) {
+			@include span-columns(7);
+			@include shift(3);
+		}
+	}
+	.projectList {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+	}
 	p.all-projects-link {
 		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(4);
+			@include shift(8);
+		}
 	}	
 }
+
 #contact-info {
 	border-bottom: em(20) solid $middle-background-color;
+	h2 {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(2);
+		}
+	}
 }

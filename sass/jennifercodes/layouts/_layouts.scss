@@ -1,114 +1,49 @@
 //----------------
 // General
 body {
-//	@include highlight-breakpoint;
+	@include highlight-breakpoint;
 }
 header,
 section {
 	clear: both;
+	@include clearfix;
 }
 .container {
 	@include outer-container;
 	padding: $base-spacing ($base-spacing/2);
-	#skill-links & {
-		padding: $base-spacing 0;
-	}
 }
 //----------------
-// Home Page
-#hero {
-	img {
-		margin-top: $h1-margin-top;
-		@include span-columns(4);
-		@include shift(1);
-		@include media($mobile-large-screen-up) {
-			@include span-columns(2);
-			@include shift(2);
-		}
+// General Page Layouts
+.skill,
+.projects,
+.project-item {
+	h1,
+	h2,
+	h3,
+	h4, 
+	p,
+	ul {
 		@include media($medium-screen-up) {
-			@include span-columns(3);
-			@include shift(2);
-		}
-	}
-	h1 {
-		font-weight: 400;
-		text-align: center;
-		@include span-columns(6);
-		@include media($medium-screen-up) {
-			@include span-columns(6);
-		}
-		span:first-child {
-			@include media($tablet-small-screen-up) {
-				font-size: modular-scale(1, $h1-font-size-mobile);				
-			}
-			@include media($large-screen-up) {
-				font-size: modular-scale(1, $h1-font-size);
-			}
-		}
-		span:last-child {
-			display: block;
-		}
-	}
-	p {	
-		font-size: modular-scale(-1, em(42));
-		font-weight: 300;
-		line-height: 1.25;
-		text-align: center;
-		@include span-columns(6);
-		@include media($medium-screen-up) {
-			@include span-columns(6);
-			@include shift(3);
+			@include span-columns(10);
+			@include shift(1);
 		}
 		@include media($large-screen-up) {
-			font-size: em(42);
+			@include span-columns(8);
+			@include shift(2);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(7);
+			@include shift(2);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(6);
+			@include shift(2);
 		}
 	}
-}
-#skill-links {
-	h2 {
-		margin-right: ($base-spacing/4);
-		margin-left: ($base-spacing/4);
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li {
-			font-size: $h2-font-size-mobile;
-			line-height: $h2-line-height-mobile;
-			@include media($large-screen-up) {
-				font-size: $h2-font-size;
-				line-height: $h2-line-height;
-			}
-			@for $i from 1 through 6 {
-			  &:nth-child(#{$i}) {
-			  	@include span-columns((6-$i));
-				@include shift($i);
-				@include omega;
-				@include media($medium-screen-up) {
-					@include span-columns((9-$i));
-					@include shift((2+($i*2)));
-					@include omega;
-				}
-			  }				
-			}
-		}
-	}
-}
-
-#project-links {
-	background-color: $dark-background-color;
-	p.all-projects-link {
-		@include span-columns(6);
-	}	
-}
-#contact-info {
-	border-bottom: em(20) solid $middle-background-color;
 }
 //----------------
 // Project Listing
 .projectList {
-	
 	@include clearfix;
 }
 .projectList-article {
@@ -132,7 +67,7 @@ section {
 	a {
 		color: $white;
 	}
-	h2 {
+	h3 {
 		position: absolute;
 		bottom: 0;
 		left: 0;

@@ -1,12 +1,16 @@
 <?php 	
 	include('perch/runtime.php'); 
 ?>
-<?php perch_layout('global.header'); ?>
+<?php perch_layout('global.header', array(
+	'body-class'=>'homepage',
+)); ?>
 <section id="hero">
 	<div class="container">
-		<?php perch_content('Hero Photo'); ?>
-		<h1><span>Hi!</span> my name is <span>Jennifer A. Scroggins</span></h1>
-		<p>I am a web designer &amp; developer located in Ann Arbor, MI</p>
+		<div class="vertical-center">
+			<?php perch_content('Hero Photo'); ?>
+			<h1><span>Hi!</span> my name is <span>Jennifer A. Scroggins</span></h1>
+		</div>
+		<p>I am a web designer &amp; developer <span>located in Ann Arbor, MI</span></p>
 	</div>
 </section>
 <section id="skill-links">
@@ -22,7 +26,7 @@
 </section>
 <section id="project-links">
 	<div class="container">
-		<h2>I have some projects I'd like to share!</h2>
+		<h2>... and I've got some stuff to share with you!</h2>
 	<?php 
 		 perch_content_custom('Project', array(
 	      'page' => '/projects.php',
@@ -32,9 +36,9 @@
 	<p class="all-projects-link"><a href="projects">View All Projects</a></p>
 	</div>
 </section>
-<section id="contact-info">
+<!-- <section id="contact-info">
 	<div class="container">
 		<h2>Contact Me</h2>
 	</div>
-</section>
+</section> -->
 <?php perch_layout('global.footer'); ?>

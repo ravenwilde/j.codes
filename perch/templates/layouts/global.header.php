@@ -8,4 +8,4 @@
 		perch_get_css(); 
 	?>
 </head>
-<body>
+<body class="<?php perch_layout_var('body-class'); ?>">

@@ -1,6 +1,8 @@
 <?php 
   include('perch/runtime.php');   
-  perch_layout('global.header'); 
+  perch_layout('global.header', array(
+  'body-class'=>'category',
+)); 
   perch_layout('global.nav');      
 ?>
   <section>

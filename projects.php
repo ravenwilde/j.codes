@@ -1,6 +1,8 @@
 <?php 
   include($_SERVER['DOCUMENT_ROOT'].'/perch/runtime.php'); 
-  perch_layout('global.header'); 
+  perch_layout('global.header', array(
+  'body-class'=>'projects',
+)); 
   perch_layout('global.nav');
   ?>
     <header>
