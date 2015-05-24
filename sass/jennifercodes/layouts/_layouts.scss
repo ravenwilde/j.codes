@@ -1,7 +1,7 @@
 //----------------
 // General
 body {
-	@include highlight-breakpoint;
+//	@include highlight-breakpoint;
 }
 header,
 section {
@@ -11,6 +11,12 @@ section {
 .container {
 	@include outer-container;
 	padding: $base-spacing ($base-spacing/2);
+	@include media($tablet-small-screen-up) {
+		padding: $base-spacing $base-spacing;
+	}
+	header & {
+		padding-bottom: 0;
+	}
 }
 //----------------
 // General Page Layouts
@@ -41,10 +47,51 @@ section {
 		}
 	}
 }
+.projects {
+	.projectList {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+	}
+}
+.skill {
+	.projectList {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(7);
+			@include shift(2);
+		}
+	}
+}
+.project-item {
+	.gallery {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(7);
+			@include shift(2);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(6);
+			@include shift(2);
+		}
+	}
+}
 //----------------
 // Project Listing
 .projectList {
 	@include clearfix;
+	margin-top: $base-spacing;
+//	margin-bottom: $base-spacing;
 }
 .projectList-article {
 	position: relative;
@@ -90,7 +137,7 @@ section {
 
 }
 //----------------
-// Skill Pages
+// Code Sample Links
 .codeSampleList {
 	list-style: none;
 	padding: 0;
@@ -100,6 +147,23 @@ section {
 		a:after {
 			content: ">";
 			margin-left: .25em;
+		}
+	}
+}
+//----------------
+// Image Gallery
+.gallery {
+	img {
+		@include card(1);
+		@include span-columns(6);
+		@include media($tablet-small-screen-up) {
+			@include span-columns(3);
+			@include omega(2n);
+		}
+		@include media($medium-screen-up) {
+			@include omega-reset(2n);
+			@include span-columns(4);
+			@include omega(3n);
 		}
 	}
 }

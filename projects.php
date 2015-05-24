@@ -7,12 +7,12 @@
   ?>
     <header>
       <div class="container">
-        <h1><?php perch_content('Main heading'); ?></h1>
-        <?php perch_content('Intro'); ?>  
+        <h1><?php perch_content('Main heading'); ?></h1> 
       </div>
     </header>
     <section>
       <div class="container">
+        <?php perch_content('Intro'); ?> 
         <?php
           perch_content_create('Project', array(
             'template'   => 'project_item.html',
