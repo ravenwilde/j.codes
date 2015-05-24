@@ -2,6 +2,7 @@
 // Home Page
 #hero {
 	//background-color: $light-accent-color;
+	border-top: 5px solid $light-background-color;
 	.vertical-center {
 		@include span-columns(6);
 		@include media($medium-screen-up) {

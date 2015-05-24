@@ -23,6 +23,7 @@ nav.global-nav-skills {
 		padding: ($base-spacing/2);
 		text-align: center;
 		color: $global-navigation-color;
+		font-weight: 300;
 		@include media($medium-screen-up) {
 			text-align: left;
 		}
@@ -31,16 +32,28 @@ nav.global-nav-skills {
 
 nav.global-nav {
 	background-color: $global-navigation-background;
+	border-top: 5px solid $light-accent-color;
+	//border-bottom: 5px solid $light-accent-color;
+	// line-height:2.5;
 	li {
 		@include span-columns(3);
 		@include media($medium-screen-up) {
 			width: auto;
 		}
 	}
+	a {
+		font-size: 1.5em;
+	}
 }
 
 nav.global-nav-skills {
 	background-color: $global-skills-navigation-background;
+	border-bottom: 10px solid $base-accent-color;
+	//border-top: 10px solid $base-accent-color;
+	// .menu-toggle,
+	// li {
+	// 	line-height: 1;
+	// }
 	.menu-toggle {
 		@include span-columns(6);
 		text-align: left;
@@ -74,5 +87,9 @@ nav.global-nav-skills {
 			width: auto;
 			float: left;
 		}
+	}
+	a {
+		font-size: 1.2em;
+		line-height: 1;
 	}
 }
