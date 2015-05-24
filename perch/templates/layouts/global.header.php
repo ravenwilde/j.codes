@@ -9,3 +9,4 @@
 	?>
 </head>
 <body class="<?php perch_layout_var('body-class'); ?>">
+<div class="page-content-wrapper">

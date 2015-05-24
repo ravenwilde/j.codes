@@ -19,6 +19,30 @@ section {
 		padding-bottom: 0;
 	}
 }
+.page-content-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+html, body {
+ height: 100%;
+}
+
+.page-content-wrapper:after {
+  content: "";
+  display: block;
+}
+
+footer, 
+.page-content-wrapper:after {
+  height: 17em;
+
+  @include media($large-screen) {
+    height: 9em;
+  }
+}
 //----------------
 // General Page Layouts
 .skill,
@@ -29,7 +53,8 @@ section {
 	h3,
 	h4, 
 	p,
-	ul {
+	ul,
+	.gallery {
 		@include media($medium-screen-up) {
 			@include span-columns(10);
 			@include shift(1);
@@ -48,26 +73,15 @@ section {
 		}
 	}
 }
-.projects {
-	.projectList {
+.projectList {
+	.projects & {
 		@include span-columns(6);
 		@include media($medium-screen-up) {
 			@include span-columns(10);
 			@include shift(1);
 		}
 	}
-}
-.skill {
-	.projectList {
-		@include span-columns(6);
-		@include media($medium-screen-up) {
-			@include span-columns(7);
-			@include shift(2);
-		}
-	}
-}
-.project-item {
-	.gallery {
+	.skill & {
 		@include span-columns(6);
 		@include media($medium-screen-up) {
 			@include span-columns(10);
