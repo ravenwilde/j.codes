@@ -12,5 +12,6 @@
     'value' => perch_get('s'),
     'count' => 1,
   ));
+  perch_layout('photoswipe.default');
   perch_layout('global.footer'); 
 ?>

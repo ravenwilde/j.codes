@@ -14,14 +14,18 @@
 </section>
 <section>	
 	<div class="container">
+
 		<perch:repeater id="gallery" label="Images for Lightbox" >
 			<perch:before>
 				<div class="gallery">
 			</perch:before>
-				
-				<img 
-				src="<perch:content id="image" type="image" label="Image" width="200" height="200" crop="true" />" class="materialboxed" />
-				
+				<figure>
+					<a href="<perch:content id="image" type="image" label="Image" width="1024" data-size="1024x1024" />">
+						<img 
+						src="<perch:content id="image" type="image" label="Image" width="200" height="200" crop="true" />" />
+					</a>
+					<figcaption>Caption Goes Here</figcaption>
+				</figure>
 			<perch:after>
 				</div>
 			</perch:after>

@@ -15,6 +15,16 @@ class PerchFeather_Quill extends PerchFeather
 				));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
+					'href'=>$this->root.'/bower_components/photoswipe/dist/photoswipe.css',
+					'type'=>'text/css'
+				));
+		$out[] = $this->_single_tag('link', array(
+					'rel'=>'stylesheet',
+					'href'=>$this->root.'/bower_components/photoswipe/dist/default-skin/default-skin.css',
+					'type'=>'text/css'
+				));
+		$out[] = $this->_single_tag('link', array(
+					'rel'=>'stylesheet',
 					'href'=>'//fonts.googleapis.com/css?family=Roboto:400,300,500,700',
 					'type'=>'text/css'
 				));
@@ -48,6 +58,20 @@ class PerchFeather_Quill extends PerchFeather
 				'src'=>$this->path.'/js/jquery-1.8.2.min.js'
 			));
 			$this->register_component('jquery');
+		}
+
+		if (!$this->component_registered('photoswipe')) {
+			$out[] = $this->_script_tag(array(
+				'src'=>$this->root.'/bower_components/photoswipe/dist/photoswipe.min.js'
+			));
+			$this->register_component('photoswipe');
+		}
+
+		if (!$this->component_registered('photoswipe-ui')) {
+			$out[] = $this->_script_tag(array(
+				'src'=>$this->root.'/bower_components/photoswipe/dist/photoswipe-ui-default.min.js'
+			));
+			$this->register_component('photoswipe-ui');
 		}
 
 		if (!$this->component_registered('app.js')) {
