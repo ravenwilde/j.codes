@@ -1,8 +1,8 @@
 <?php
 	
-PerchSystem::register_feather('Quill');
+PerchSystem::register_feather('Raven');
 
-class PerchFeather_Quill extends PerchFeather
+class PerchFeather_Raven extends PerchFeather
 {
 	public function get_css($opts, $index, $count)
 	{	
@@ -10,17 +10,17 @@ class PerchFeather_Quill extends PerchFeather
 
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>$this->root.'/bower_components/normalize.css/normalize.css',
+					'href'=>$this->path.'/bower_components/normalize.css/normalize.css',
 					'type'=>'text/css'
 				));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>$this->root.'/bower_components/photoswipe/dist/photoswipe.css',
+					'href'=>$this->path.'/bower_components/photoswipe/dist/photoswipe.css',
 					'type'=>'text/css'
 				));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>$this->root.'/bower_components/photoswipe/dist/default-skin/default-skin.css',
+					'href'=>$this->path.'/bower_components/photoswipe/dist/default-skin/default-skin.css',
 					'type'=>'text/css'
 				));
 		$out[] = $this->_single_tag('link', array(
@@ -35,7 +35,7 @@ class PerchFeather_Quill extends PerchFeather
 				));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>$this->root.'/css/style.css',
+					'href'=>$this->path.'/css/style.css',
 					'type'=>'text/css'
 				));
 		
@@ -62,21 +62,21 @@ class PerchFeather_Quill extends PerchFeather
 
 		if (!$this->component_registered('photoswipe')) {
 			$out[] = $this->_script_tag(array(
-				'src'=>$this->root.'/bower_components/photoswipe/dist/photoswipe.min.js'
+				'src'=>$this->path.'/bower_components/photoswipe/dist/photoswipe.min.js'
 			));
 			$this->register_component('photoswipe');
 		}
 
 		if (!$this->component_registered('photoswipe-ui')) {
 			$out[] = $this->_script_tag(array(
-				'src'=>$this->root.'/bower_components/photoswipe/dist/photoswipe-ui-default.min.js'
+				'src'=>$this->path.'/bower_components/photoswipe/dist/photoswipe-ui-default.min.js'
 			));
 			$this->register_component('photoswipe-ui');
 		}
 
 		if (!$this->component_registered('app.js')) {
 			$out[] = $this->_script_tag(array(
-				'src'=>$this->root.'/js/app.js'
+				'src'=>$this->path.'/js/app.js'
 			));
 			$this->register_component('app.js');
 		}
