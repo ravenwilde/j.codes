@@ -5,6 +5,6 @@
 	</div>
 </footer>
 <?php perch_get_javascript(); ?>
-
+<?php PerchUtil::output_debug(); ?>
 </body>
 </html>
