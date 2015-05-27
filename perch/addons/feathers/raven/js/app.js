@@ -19,13 +19,13 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             size,
             item;
 
-        console.log(thumbElements);
+   // console.log(thumbElements);
 
         for(var i = 0; i < numNodes; i++) {
 
             figureEl = thumbElements[i]; // <figure> element
 
-            console.log(figureEl);
+  //  console.log(figureEl);
 
             // include only element nodes 
             if(figureEl.nodeType !== 1) {
@@ -34,11 +34,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
             linkEl = figureEl.children[0]; // <a> element
 
-            console.log(linkEl);
+    console.log(linkEl.getAttribute('data-size'));
 
             size = linkEl.getAttribute('data-size').split('x');
 
-            console.log(size);
+     //       console.log(size);
 
             // create slide object
             item = {

@@ -610,42 +610,74 @@ footer,
       content: ">";
       margin-left: .25em; }
 
-.gallery img {
+.gallery figure {
+  position: relative;
+  padding-bottom: 100%;
+  height: 0;
+  margin: 0 0 1.5em;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
   float: left;
   display: block;
   margin-right: 4.82916%;
   width: 100%; }
-  .gallery img:last-child {
+  .gallery figure:last-child {
     margin-right: 0; }
   @media screen and (min-width: 35em) {
-    .gallery img {
+    .gallery figure {
       float: left;
       display: block;
       margin-right: 4.82916%;
-      width: 47.58542%; }
-      .gallery img:last-child {
+      width: 47.58542%;
+      padding-bottom: 47.58542%; }
+      .gallery figure:last-child {
         margin-right: 0; }
-      .gallery img:nth-child(2n) {
+      .gallery figure:nth-child(2n) {
         margin-right: 0; }
-      .gallery img:nth-child(2n+1) {
+      .gallery figure:nth-child(2n+1) {
         clear: left; } }
   @media screen and (min-width: 40em) {
-    .gallery img {
+    .gallery figure {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%; }
-      .gallery img:nth-child(2n) {
+      width: 31.76157%;
+      padding-bottom: 31.76157%; }
+      .gallery figure:nth-child(2n) {
         margin-right: 2.35765%; }
-      .gallery img:nth-child(2n+1) {
+      .gallery figure:nth-child(2n+1) {
         clear: none; }
-      .gallery img:last-child {
+      .gallery figure:last-child {
         margin-right: 0; }
-      .gallery img:nth-child(3n) {
+      .gallery figure:nth-child(3n) {
         margin-right: 0; }
-      .gallery img:nth-child(3n+1) {
+      .gallery figure:nth-child(3n+1) {
         clear: left; } }
+  .gallery figure a {
+    display: block; }
+  .gallery figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+  .gallery figure figcaption {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+    .gallery figure figcaption:active, .gallery figure figcaption:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto; }
 
 footer {
   background-color: #202b3a;

@@ -20,7 +20,7 @@
 				<div class="gallery">
 			</perch:before>
 				<figure>
-					<a href="<perch:content id="image" type="image" label="Image" width="1024" data-size="1024x1024" />">
+					<a href="<perch:content id="image" type="image" label="Image" width="1024" />" data-size="<perch:content id="image" type="image" label="Image" output="w" />x<perch:content id="image" type="image" label="Image" output="h" />">
 						<img 
 						src="<perch:content id="image" type="image" label="Image" width="200" height="200" crop="true" />" />
 					</a>
