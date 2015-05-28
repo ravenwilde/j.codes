@@ -291,14 +291,7 @@ footer,
   .projects h4,
   .projects p,
   .projects ul,
-  .projects .gallery,
-  .project-item h1,
-  .project-item h2,
-  .project-item h3,
-  .project-item h4,
-  .project-item p,
-  .project-item ul,
-  .project-item .gallery {
+  .projects .gallery {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -317,14 +310,7 @@ footer,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child,
-    .projects .gallery:last-child,
-    .project-item h1:last-child,
-    .project-item h2:last-child,
-    .project-item h3:last-child,
-    .project-item h4:last-child,
-    .project-item p:last-child,
-    .project-item ul:last-child,
-    .project-item .gallery:last-child {
+    .projects .gallery:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 53.75em) {
   .skill h1,
@@ -340,14 +326,7 @@ footer,
   .projects h4,
   .projects p,
   .projects ul,
-  .projects .gallery,
-  .project-item h1,
-  .project-item h2,
-  .project-item h3,
-  .project-item h4,
-  .project-item p,
-  .project-item ul,
-  .project-item .gallery {
+  .projects .gallery {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -366,14 +345,7 @@ footer,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child,
-    .projects .gallery:last-child,
-    .project-item h1:last-child,
-    .project-item h2:last-child,
-    .project-item h3:last-child,
-    .project-item h4:last-child,
-    .project-item p:last-child,
-    .project-item ul:last-child,
-    .project-item .gallery:last-child {
+    .projects .gallery:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 68em) {
   .skill h1,
@@ -389,14 +361,7 @@ footer,
   .projects h4,
   .projects p,
   .projects ul,
-  .projects .gallery,
-  .project-item h1,
-  .project-item h2,
-  .project-item h3,
-  .project-item h4,
-  .project-item p,
-  .project-item ul,
-  .project-item .gallery {
+  .projects .gallery {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -415,14 +380,7 @@ footer,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child,
-    .projects .gallery:last-child,
-    .project-item h1:last-child,
-    .project-item h2:last-child,
-    .project-item h3:last-child,
-    .project-item h4:last-child,
-    .project-item p:last-child,
-    .project-item ul:last-child,
-    .project-item .gallery:last-child {
+    .projects .gallery:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 80em) {
   .skill h1,
@@ -438,14 +396,7 @@ footer,
   .projects h4,
   .projects p,
   .projects ul,
-  .projects .gallery,
-  .project-item h1,
-  .project-item h2,
-  .project-item h3,
-  .project-item h4,
-  .project-item p,
-  .project-item ul,
-  .project-item .gallery {
+  .projects .gallery {
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -464,14 +415,7 @@ footer,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child,
-    .projects .gallery:last-child,
-    .project-item h1:last-child,
-    .project-item h2:last-child,
-    .project-item h3:last-child,
-    .project-item h4:last-child,
-    .project-item p:last-child,
-    .project-item ul:last-child,
-    .project-item .gallery:last-child {
+    .projects .gallery:last-child {
       margin-right: 0; } }
 
 .projects .projectList {
@@ -599,6 +543,139 @@ footer,
         font-size: 1.625rem; } }
   .projectList-article img {
     width: 100%; }
+
+.project-item h1,
+.project-item .project-info,
+.project-item .project-desc,
+.project-item .gallery {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%; }
+  .project-item h1:last-child,
+  .project-item .project-info:last-child,
+  .project-item .project-desc:last-child,
+  .project-item .gallery:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 40em) {
+    .project-item h1,
+    .project-item .project-info,
+    .project-item .project-desc,
+    .project-item .gallery {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      margin-left: 8.5298%; }
+      .project-item h1:last-child,
+      .project-item .project-info:last-child,
+      .project-item .project-desc:last-child,
+      .project-item .gallery:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 53.75em) {
+    .project-item h1,
+    .project-item .project-info,
+    .project-item .project-desc,
+    .project-item .gallery {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      .project-item h1:last-child,
+      .project-item .project-info:last-child,
+      .project-item .project-desc:last-child,
+      .project-item .gallery:last-child {
+        margin-right: 0; } }
+@media screen and (min-width: 68em) {
+  .project-item h1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    margin-left: 17.05961%; }
+    .project-item h1:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 80em) {
+  .project-item h1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 17.05961%; }
+    .project-item h1:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 68em) {
+  .project-item .project-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-left: 8.5298%;
+    text-align: right; }
+    .project-item .project-info:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 80em) {
+  .project-item .project-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-left: 8.5298%; }
+    .project-item .project-info:last-child {
+      margin-right: 0; } }
+.project-item .project-info h3 {
+  margin-top: 0; }
+  .project-item .project-info h3 span {
+    font-size: 1.00433rem;
+    display: block; }
+.project-item .project-info p {
+  font-size: 1.625rem;
+  font-weight: 300; }
+  @media screen and (min-width: 53.75em) {
+    .project-item .project-info p {
+      font-size: 1.625rem; } }
+  .project-item .project-info p span {
+    font-size: 1.00433rem;
+    display: block; }
+.project-item .project-info ul {
+  list-style: none; }
+@media screen and (min-width: 68em) {
+  .project-item .project-desc {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 0%; }
+    .project-item .project-desc:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 80em) {
+  .project-item .project-desc {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 0%; }
+    .project-item .project-desc:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 68em) {
+  .project-item .gallery {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 8.5298%; }
+    .project-item .gallery:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 80em) {
+  .project-item .gallery {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 8.5298%; }
+    .project-item .gallery:last-child {
+      margin-right: 0; } }
 
 .codeSampleList {
   list-style: none;

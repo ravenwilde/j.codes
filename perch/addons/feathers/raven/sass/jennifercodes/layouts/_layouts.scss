@@ -46,8 +46,7 @@ footer,
 //----------------
 // General Page Layouts
 .skill,
-.projects,
-.project-item {
+.projects {
 	h1,
 	h2,
 	h3,
@@ -152,6 +151,87 @@ footer,
 
 }
 //----------------
+// Project Items
+.project-item {
+	h1,
+	.project-info,
+	.project-desc,
+	.gallery {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+	}
+	h1 {
+		@include media($xx-large-screen-up) {
+			@include span-columns(7);
+			@include shift(2);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(6);
+			@include shift(2);
+		}
+	}
+	.project-info {
+		@include media($xx-large-screen-up) {
+			@include span-columns(3);
+			@include shift(1);
+			text-align: right;
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(3);
+			@include shift(1);
+		}
+		h3 {
+			margin-top: 0;
+			span {
+				font-size: modular-scale(-1, $h3-font-size);
+				display: block;
+			}
+		}
+		p {
+			font-size: $h3-font-size-mobile;
+			font-weight: 300;
+			@include media($large-screen-up) {
+				font-size: $h3-font-size;
+			}
+			span {
+				font-size: modular-scale(-1, $h3-font-size);
+				display: block;
+				
+			}
+		}
+		ul {
+			list-style: none;
+		}
+	}
+	.project-desc {
+		@include media($xx-large-screen-up) {
+			@include span-columns(6);
+			@include shift(0);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(6);
+			@include shift(0);
+		}
+	}
+	.gallery {
+		@include media($xx-large-screen-up) {
+			@include span-columns(9);
+			@include shift(1);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(9);
+			@include shift(1);
+		}
+	}
+}
+//----------------
 // Code Sample Links
 .codeSampleList {
 	list-style: none;
@@ -172,7 +252,6 @@ footer,
 	figure {
 		position: relative;
 		padding-bottom: 100%;
-		// padding-top: 25px;
 		height: 0;
 		margin: 0 0 $base-spacing;
 		@include card(1);

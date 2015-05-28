@@ -5,11 +5,21 @@
 </header>
 <section>
 	<div class="container"> 
-		<perch:content id="desc" type="textarea" label="Description" markdown="true" editor="markitup" />
-		<ul>
-			<li>Client: <perch:content id="client" type="text" label="Client" required="true" /></li>
-			<li>Year: <perch:content id="year" type="text" label="Year" required="true" /></li>
-		</ul>
+		<aside class="project-info">
+			<h3><span>Created For:</span> <perch:content id="client" type="text" label="Created For" required="true" /></h3>
+			<p><span>Years Involved:</span> <perch:content id="year" type="text" label="Years Involved" required="true" /></p>
+			<h4>Technology Leveraged:</h4>
+			<perch:repeater id="technologies" label="Technologies Leveraged">
+			    <perch:before><ul></perch:before>
+			    <li>
+			        <perch:content type="text" id="technology" label="Technology"  />
+			    </li>
+			    <perch:after></ul></perch:after>
+			</perch:repeater>
+		</aside>
+		<div class="project-desc">
+			<perch:content id="desc" type="textarea" label="Description" markdown="true" editor="markitup" />
+		</div>
 	</div>
 </section>
 <section>	
@@ -33,6 +43,8 @@
 		
 		<perch:content id="slug" for="title" type="slug" suppress="true" />
 		<perch:content id="listimage" type="image" label="Image for listing page" width="300" height="200" crop="true" suppress="true" />
+
+		<perch:categories id="Skills" label="Skills Utilized" set="skills" required="true" suppress="true"></perch:categories>
 
     </div>
 </section>
