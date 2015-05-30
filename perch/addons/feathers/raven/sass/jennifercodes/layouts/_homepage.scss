@@ -2,7 +2,7 @@
 // Home Page
 #hero {
 	//background-color: $light-accent-color;
-	border-top: 5px solid $light-background-color;
+	//border-top: 5px solid $light-background-color;
 	.vertical-center {
 		@include span-columns(6);
 		@include media($medium-screen-up) {
@@ -187,10 +187,7 @@
 			@for $i from 1 through 6 {
 			    &:nth-child(#{$i}) {
 					a {
-						//@include span-columns(6);
-						@include media($medium-screen-up) {
-						//	@include span-columns((2*$i));							
-						}
+						@include transition(all 0.2s ease-out);
 						background-color: map-get($color-map, $i);
 						&:hover {
 							opacity: .9;

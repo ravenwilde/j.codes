@@ -27,7 +27,7 @@
 				perch_content_custom('Project', array(
 			        'template' => 'project_listing.html',
 			        'page'=>'/projects.php',
-			        'category' => 'skills/html5',
+			        'category' => 'skills/sketch-adobecs',
 		      		));
 		    ?>
 		</div>

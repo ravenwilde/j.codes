@@ -46,15 +46,15 @@ $color-map: (
 // Background Color
 $base-background-color: white;
 
-// Font Colors
-$base-font-color: $black;
-$base-accent-color: $smoky;
-$light-accent-color: $texas-rose;
-
 // Background Colors
 $light-background-color: $new-york-pink;
 $middle-background-color: $turkish-rose;
 $dark-background-color: $blue-bayoux;
+
+// Font Colors
+$base-font-color: darken($dark-background-color, 20);
+$base-accent-color: $smoky;
+$light-accent-color: $texas-rose;
 
 // Link Colors
 $base-link-color: $base-accent-color;

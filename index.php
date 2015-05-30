@@ -4,6 +4,13 @@
 <?php perch_layout('global.header', array(
 	'body-class'=>'homepage',
 )); ?>
+<div class="colorbar">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
 <section id="hero">
 	<div class="container">
 		<div class="vertical-center">
