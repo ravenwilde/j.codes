@@ -35,6 +35,13 @@ $new-york-pink: #DA727E;
 $turkish-rose: #AC6C82;
 $smoky: #685C79;
 $blue-bayoux: #455C7B;
+$color-map: (
+  	1: $texas-rose,
+	2: $new-york-pink,
+	3: $turkish-rose,
+	4: $smoky,
+	5: $blue-bayoux
+);
 
 // Background Color
 $base-background-color: white;
