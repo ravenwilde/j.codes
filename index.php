@@ -43,9 +43,9 @@
 	<p class="all-projects-link"><a href="projects">View All Projects</a></p>
 	</div>
 </section>
-<!-- <section id="contact-info">
+<section id="contact-info">
 	<div class="container">
-		<h2>Contact Me</h2>
+		<h2>You Can Contact Me Through All The Usual Ways...</h2>
 	</div>
-</section> -->
+</section>
 <?php perch_layout('global.footer'); ?>

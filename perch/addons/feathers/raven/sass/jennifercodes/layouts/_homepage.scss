@@ -223,21 +223,44 @@
 		}
 	}
 	p.all-projects-link {
-		@include span-columns(6);
+		margin-top: $base-spacing;
+		margin-bottom: $base-spacing;
+		@include span-columns(2);
+		@include shift(2);
+		text-align: right;
 		@include media($medium-screen-up) {
 			@include span-columns(4);
-			@include shift(8);
+			@include shift(4);
+			text-align: center;
+		}
+		a {
+			display: block;
+			width: 100%; 
+			padding: ($base-spacing/2) $gutter;
+			color: $white;
+			font-size: modular-scale(1);
+			font-weight: 300;
+			text-transform: uppercase;
+			background-color: darken($middle-background-color, 10);
+			border-radius: 1em;
+			@include transition(all 0.2s ease-out);
+			&:hover {
+				opacity: .9;
+				color: $white;
+			}
+			@include media($medium-screen-up) {
+				padding: ($base-spacing/4) $gutter;
+			}
 		}
 	}	
 }
 
 #contact-info {
-	border-bottom: em(20) solid $middle-background-color;
 	h2 {
 		@include span-columns(6);
 		@include media($medium-screen-up) {
 			@include span-columns(10);
-			@include shift(2);
+			@include shift(1);
 		}
 	}
 }
