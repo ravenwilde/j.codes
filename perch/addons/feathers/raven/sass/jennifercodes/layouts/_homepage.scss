@@ -225,9 +225,8 @@
 	p.all-projects-link {
 		margin-top: $base-spacing;
 		margin-bottom: $base-spacing;
-		@include span-columns(2);
-		@include shift(2);
-		text-align: right;
+		@include span-columns(6);
+		text-align: center;
 		@include media($medium-screen-up) {
 			@include span-columns(4);
 			@include shift(4);
@@ -236,7 +235,7 @@
 		a {
 			display: block;
 			width: 100%; 
-			padding: ($base-spacing/2) $gutter;
+			padding: ($base-spacing/2) 0;
 			color: $white;
 			font-size: modular-scale(1);
 			font-weight: 300;
@@ -261,6 +260,28 @@
 		@include media($medium-screen-up) {
 			@include span-columns(10);
 			@include shift(1);
+		}
+	}
+	ul {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+		padding: 0;
+		list-style: none;
+		li {
+			display: inline-block;
+			float: left;
+			width: 20%;
+			text-align: center;
+			svg {
+				width: 70%;
+				margin: 0 auto;
+				@include media($medium-screen-up) {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

@@ -921,7 +921,8 @@ footer,
 
 footer {
   background-color: #202b3a;
-  color: #ffffff; }
+  color: #a5aab0;
+  text-align: right; }
 
 #hero .vertical-center {
   float: left;
@@ -1362,9 +1363,8 @@ footer {
   float: left;
   display: block;
   margin-right: 4.82916%;
-  width: 30.11389%;
-  margin-left: 34.94305%;
-  text-align: right; }
+  width: 100%;
+  text-align: center; }
   #project-links p.all-projects-link:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
@@ -1380,7 +1380,7 @@ footer {
   #project-links p.all-projects-link a {
     display: block;
     width: 100%;
-    padding: 0.75em 1.618em;
+    padding: 0.75em 0;
     color: #ffffff;
     font-size: 1.618em;
     font-weight: 300;
@@ -1413,5 +1413,34 @@ footer {
       margin-left: 8.5298%; }
       #contact-info h2:last-child {
         margin-right: 0; } }
+#contact-info ul {
+  float: left;
+  display: block;
+  margin-right: 4.82916%;
+  width: 100%;
+  padding: 0;
+  list-style: none; }
+  #contact-info ul:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 40em) {
+    #contact-info ul {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%;
+      margin-left: 17.05961%; }
+      #contact-info ul:last-child {
+        margin-right: 0; } }
+  #contact-info ul li {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    text-align: center; }
+    #contact-info ul li svg {
+      width: 70%;
+      margin: 0 auto; }
+      @media screen and (min-width: 40em) {
+        #contact-info ul li svg {
+          width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

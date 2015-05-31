@@ -359,5 +359,6 @@ footer,
 // Footer
 footer {
 	background-color: darken($dark-background-color, 20);
-	color: $white;
+	color: tint(darken($dark-background-color, 20), 60);
+	text-align: right;
 }
