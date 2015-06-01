@@ -23,7 +23,7 @@
 	<meta name="application-name" content="jennifer.codes">
 	<meta name="msapplication-TileColor" content="#603cba">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-	<meta name="theme-color" content="#455c7b">
+	<meta name="theme-color" content="#202B3A">
 	<!-- /favicon -->
 	<?php 
 		perch_page_attributes();	
