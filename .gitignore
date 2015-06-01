@@ -3,6 +3,7 @@
 /node_modules/*
 .sass-cache
 /img/art/*
+/img/*
 /analytics/*
 /perch/config/*
 /perch/core/*
