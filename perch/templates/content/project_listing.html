@@ -1,0 +1,12 @@
+<perch:before>
+    <div class="projectList">
+</perch:before>
+<article class="projectList-article">
+	<h3><a href="/detail/<perch:content id="slug" for="title" type="slug" />"><perch:content id="title" type="text" label="Title" required="true" title="true"/></a></h3>
+	<a href="/detail/<perch:content id="slug" for="title" type="slug" />">&nbsp;</a>
+	<img src="<perch:content id="listimage" type="image" label="Image for listing page" crop="true" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
+</article>
+<perch:after>
+    </div>
+</perch:after>
+	

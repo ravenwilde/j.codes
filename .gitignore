@@ -3,7 +3,9 @@
 /node_modules/*
 .sass-cache
 /img/art/*
+/img/*
 /analytics/*
 /perch/config/*
 /perch/core/*
 perch_v2.8.6.zip
+*.css.map

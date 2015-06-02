@@ -1,0 +1,88 @@
+// Typography
+$headline-sans-serif: 'Oswald', sans-serif;
+$body-sans-serif: 'Roboto', serif;
+$base-font-family: $body-sans-serif;
+$header-font-family: $headline-sans-serif;
+$base-font-size: 1em;
+
+$modular-scale-ratio: $golden !global;
+$modular-scale-base: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$header-line-height: 1.5;
+
+// Other Sizes
+$base-border-radius: 0;
+$base-spacing: $base-line-height * 1em;
+$base-z-index: 0;
+
+// Colors
+$white: #ffffff;
+$black: tint(#000000, 10%);
+$blue: #477DCA;
+
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Miami Sunset Palette
+$texas-rose: #FFAA5C;
+$new-york-pink: #DA727E;
+$turkish-rose: #AC6C82;
+$smoky: #685C79;
+$blue-bayoux: #455C7B;
+$color-map: (
+  	1: $texas-rose,
+	2: $new-york-pink,
+	3: $turkish-rose,
+	4: $smoky,
+	5: $blue-bayoux,
+	6: $texas-rose,
+	7: $new-york-pink,
+	8: $turkish-rose,
+	9: $smoky,
+	10: $blue-bayoux
+);
+
+// Background Color
+$base-background-color: white;
+
+// Background Colors
+$light-background-color: $new-york-pink;
+$middle-background-color: $turkish-rose;
+$dark-background-color: $blue-bayoux;
+
+// Font Colors
+$base-font-color: darken($dark-background-color, 20);
+$base-accent-color: $smoky;
+$light-accent-color: $texas-rose;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: lighten($base-accent-color, 40);
+$success-color: $light-green;
+
+// Border color
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: $base-font-size;
+$form-font-family: $base-font-family;
