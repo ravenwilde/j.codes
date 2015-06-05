@@ -177,6 +177,9 @@ footer,
 		@include media($xx-large-screen-up) {
 			font-size: $h2-font-size;
 			bottom: ($base-spacing/4);
+			.skill & {
+				font-size: $h3-font-size;
+			}
 		}
 		a {
 			color: $white;
