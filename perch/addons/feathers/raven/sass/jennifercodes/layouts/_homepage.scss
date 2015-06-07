@@ -128,7 +128,7 @@
 				a {
 					@include span-columns(6);
 					@include media($medium-screen-up) {
-						@include span-columns(5);						
+						@include span-columns(8);						
 					}
 				}
 			}
