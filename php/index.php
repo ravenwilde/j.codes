@@ -23,6 +23,9 @@
 			      'template'  => 'category_skill.html',
 			      'edit-mode' => 'singlepage',
 					));
+				perch_content_custom('Skill', array(
+					'template' => 'category_skill.html'	
+					));
 
 				perch_content_custom('Project', array(
 			        'template' => 'project_listing.html',
