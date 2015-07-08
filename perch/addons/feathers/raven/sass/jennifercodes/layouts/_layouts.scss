@@ -306,6 +306,15 @@ footer,
 			@include span-columns(6);
 			@include shift(0);
 		}
+		ul {
+			list-style: none;
+			padding: 0;
+			font-weight: 900;
+			a:after {
+				content: ">";
+				margin-left: .25em;
+			}
+		}
 	}
 	.gallery {
 		@include media($xx-large-screen-up) {
