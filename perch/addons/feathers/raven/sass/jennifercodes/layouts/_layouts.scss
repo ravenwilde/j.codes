@@ -127,11 +127,15 @@ footer,
 	margin: 0 0 $base-spacing;
 	height: 0;
 	padding-bottom: 100%;
+	overflow: hidden;
 	@include transition(all 0.1s ease-out);
-		@include card(1);
-		&:hover {
-			@include card(2);
+	@include card(1);
+	&:hover {
+		@include card(2);
+		h3 {
+			@include visuallyhidden;
 		}
+	}
 	@include span-columns(6);
 	@include media($mobile-large-screen-up) {
 		@include span-columns(3);
@@ -155,6 +159,7 @@ footer,
 		left: ($gutter/4);
 		z-index: 1000;
 		margin: 0;
+		font-size: $h2-font-size;
 		font-family: $body-sans-serif;
 		font-weight: 500;
 		width: 90%;
@@ -167,13 +172,20 @@ footer,
 				@include filter(grayscale(0%));
 			}
 		}
-		@include media($medium-screen-up) {
-			font-size: modular-scale(-1, $h3-font-size);
-			line-height: 1;
-		}
-		@include media($medium-large-screen-up) {
+		@include media($mobile-large-screen-up) {
 			font-size: $h3-font-size;
 		}
+		@include media($medium-screen-up) {
+			line-height: 1;
+		}
+		@include media($xx-large-screen-up) {
+			font-size: $h2-font-size;
+			bottom: ($base-spacing/4);
+			.skill & {
+				font-size: $h3-font-size-mobile;
+			}
+		}
+		
 		a {
 			color: $white;
 			&:hover {
@@ -219,9 +231,9 @@ footer,
 		right: 0;
 		width: 100%;
 		height: 100%;
-		@include filter(grayscale(90%));
+		@include filter(grayscale(90%) blur(6px));
 		&:hover {
-			@include filter(grayscale(0%));
+			@include filter(grayscale(0%) blur(0px));
 		}
 	}
 }
@@ -293,6 +305,15 @@ footer,
 		@include media($super-large-screen-up) {
 			@include span-columns(6);
 			@include shift(0);
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			font-weight: 900;
+			a:after {
+				content: ">";
+				margin-left: .25em;
+			}
 		}
 	}
 	.gallery {

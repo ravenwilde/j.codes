@@ -16,9 +16,17 @@
 			    </li>
 			    <perch:after></ul></perch:after>
 			</perch:repeater>
+
 		</aside>
 		<div class="project-desc">
 			<perch:content id="desc" type="textarea" label="Description" markdown="true" editor="markitup" />
+			<perch:repeater id="links" label="Relevent Links">
+			    <perch:before><ul></perch:before>
+			    <li>
+			    	<a href="<perch:content id="link" type="text" label="Link" />"><perch:content type="text" id="link_text" label="Link Text"  /></a>
+			    </li>
+			    <perch:after></ul></perch:after>
+			</perch:repeater>
 		</div>
 	</div>
 </section>

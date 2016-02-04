@@ -513,6 +513,7 @@ footer,
   margin: 0 0 1.5em;
   height: 0;
   padding-bottom: 100%;
+  overflow: hidden;
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -523,6 +524,22 @@ footer,
   width: 100%; }
   .projectList-article:hover {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+    .projectList-article:hover h3 {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; }
+      .projectList-article:hover h3:active, .projectList-article:hover h3:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto; }
   .projectList-article:last-child {
     margin-right: 0; }
   @media screen and (min-width: 30em) {
@@ -577,6 +594,7 @@ footer,
     left: 0.4045em;
     z-index: 1000;
     margin: 0;
+    font-size: 2.625rem;
     font-family: "Roboto", serif;
     font-weight: 500;
     width: 90%;
@@ -592,13 +610,18 @@ footer,
         transition: all 0.1s ease-out;
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%); }
-    @media screen and (min-width: 40em) {
-      .projectList-article h3 {
-        font-size: 1.00433rem;
-        line-height: 1; } }
-    @media screen and (min-width: 46.875em) {
+    @media screen and (min-width: 30em) {
       .projectList-article h3 {
         font-size: 1.625rem; } }
+    @media screen and (min-width: 40em) {
+      .projectList-article h3 {
+        line-height: 1; } }
+    @media screen and (min-width: 68em) {
+      .projectList-article h3 {
+        font-size: 2.625rem;
+        bottom: 0.375em; }
+        .skill .projectList-article h3 {
+          font-size: 1.625rem; } }
     .projectList-article h3 a {
       color: #ffffff; }
       .projectList-article h3 a:hover {
@@ -706,11 +729,11 @@ footer,
     right: 0;
     width: 100%;
     height: 100%;
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); }
+    -webkit-filter: grayscale(90%) blur(6px);
+    filter: grayscale(90%) blur(6px); }
     .projectList-article img:hover {
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%); }
+      -webkit-filter: grayscale(0%) blur(0px);
+      filter: grayscale(0%) blur(0px); }
 
 .project-item h1,
 .project-item .project-info,
@@ -826,6 +849,13 @@ footer,
     margin-left: 0%; }
     .project-item .project-desc:last-child {
       margin-right: 0; } }
+.project-item .project-desc ul {
+  list-style: none;
+  padding: 0;
+  font-weight: 900; }
+  .project-item .project-desc ul a:after {
+    content: ">";
+    margin-left: .25em; }
 @media screen and (min-width: 68em) {
   .project-item .gallery {
     float: left;
@@ -1143,7 +1173,7 @@ footer {
           float: left;
           display: block;
           margin-right: 2.35765%;
-          width: 82.94039%;
+          width: 48.82117%;
           margin-left: 51.17883%; }
           #skill-links ul li:nth-child(1):last-child {
             margin-right: 0; } }
@@ -1159,7 +1189,7 @@ footer {
             float: left;
             display: block;
             margin-right: 2.35765%;
-            width: 40.29137%; }
+            width: 65.88078%; }
             #skill-links ul li:nth-child(1) a:last-child {
               margin-right: 0; } }
     #skill-links ul li:nth-child(2) {
@@ -1444,7 +1474,7 @@ footer {
   #contact-info ul li {
     display: inline-block;
     float: left;
-    width: 20%;
+    width: 16.66667%;
     text-align: center; }
     #contact-info ul li svg {
       width: 70%;
@@ -1452,5 +1482,39 @@ footer {
       @media screen and (min-width: 40em) {
         #contact-info ul li svg {
           width: 100%; } }
+#contact-info .icon {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+#contact-info .github-icon:hover path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #4183c4; }
+#contact-info .twitter-icon:hover path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #55acee; }
+#contact-info .linkedin-icon:hover path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #0077b5; }
+#contact-info .stackoverflow-icon:hover path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #fe7a15; }
+#contact-info .instagram-icon:hover path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #3f729b; }
+#contact-info .email-icon:hover path {
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  fill: #DA727E; }
 
 /*# sourceMappingURL=style.css.map */
