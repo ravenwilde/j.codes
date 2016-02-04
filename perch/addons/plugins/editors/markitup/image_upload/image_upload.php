@@ -1,5 +1,5 @@
 <?php
-    require('../../../../../runtime.php');
+    require('../../../../../core/inc/api.php');
 
     if (!class_exists('PerchAssets_Assets', false)) {
         include_once(PERCH_CORE.'/apps/assets/PerchAssets_Assets.class.php');
