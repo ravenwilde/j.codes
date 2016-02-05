@@ -2,9 +2,32 @@
     <div class="projectList">
 </perch:before>
 <article class="projectList-article">
-	<h3><a href="/detail/<perch:content id="slug" for="title" type="slug" />"><perch:content id="title" type="text" label="Title" required="true" title="true"/></a></h3>
-	<a href="/detail/<perch:content id="slug" for="title" type="slug" />">&nbsp;</a>
-	<img src="<perch:content id="listimage" type="image" label="Image for listing page" crop="true" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
+	<div class="project-img">
+		<img src="<perch:content id="listimage" type="image" label="Image for listing page" crop="false" />" alt="<perch:content id="title" type="text" label="Title" required="true" title="true" />" />
+	</div>
+	<div class="project-info">
+		<h3><perch:content id="title" type="text" label="Title" required="true" title="true"/></h3>
+		<perch:content id="desc" type="textarea" label="Description" markdown="true" editor="markitup" />
+		<perch:repeater id="links" label="Relevent Links">
+		    <perch:before><ul></perch:before>
+		    <li>
+		    	<a href="<perch:content id="link" type="text" label="Link" />"><perch:content type="text" id="link_text" label="Link Text"  /></a>
+		    </li>
+		    <perch:after></ul></perch:after>
+		</perch:repeater>
+		<h4>Built With:</h4>
+		<perch:repeater id="technologies" label="Technologies Leveraged">
+		    <perch:before><ul></perch:before>
+		    <li>
+		        <perch:content type="text" id="technology" label="Technology"  />
+		    </li>
+		    <perch:after></ul></perch:after>
+		</perch:repeater>
+
+		<a href="/detail/<perch:content id="slug" for="title" type="slug" />">&nbsp;</a>		
+	</div>
+
+	
 </article>
 <perch:after>
     </div>

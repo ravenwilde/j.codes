@@ -1,10 +1,11 @@
 // generated at gridlover.net, designed to mimic to the golden ratio 1.618
 
 $base-font-size: 1rem;
-$base-line-height: 1.625rem;
+$base-line-height: 1.525rem;
 $measure: 50em;
 
 $h1-font-size: 4.25rem;
+$h1-font-weight: 400;
 $h1-line: 1.625rem;
 $h1-lines: 3;
 $h1-line-height: $h1-line * $h1-lines;
@@ -15,6 +16,7 @@ $h1-font-size-mobile: modular-scale(-1, $h1-font-size);
 $h1-line-height-mobile: $h1-line * 2;
 
 $h2-font-size: 2.625rem;
+$h2-font-weight: 400;
 $h2-line: 1.625rem;
 $h2-lines: 2;
 $h2-line-height: $h2-line * $h2-lines;
@@ -25,6 +27,7 @@ $h2-font-size-mobile: modular-scale(-1, $h2-font-size);
 $h2-line-height-mobile: $h2-line * 2;
 
 $h3-font-size: 1.625rem;
+$h3-font-weight: 400;
 $h3-line: 1.625rem;
 $h3-lines: 1;
 $h3-line-height: $h3-line * $h3-lines;
@@ -35,6 +38,7 @@ $h3-font-size-mobile: $h3-font-size;
 $h3-line-height-mobile: $h3-line-height;
 
 $h4-font-size: 1rem;
+$h4-font-weight: 400;
 $h4-line: 1.625rem;
 $h4-lines: 1;
 $h4-line-height: $h4-line * $h4-lines;
@@ -50,8 +54,9 @@ $h4-line-height-mobile: $h4-line-height;
 // The grid will stay aligned
 
 h1 {
-	font-family: $header-font-family;
+	font-family: $hero-header-font-family;
 	font-size: $h1-font-size-mobile;
+  font-weight: $h1-font-weight;
 	line-height: $h1-line-height-mobile;
 	margin-top: $h1-margin-top;
 	margin-bottom: $h1-margin-bottom;	
@@ -63,6 +68,7 @@ h1 {
 h2 {
 	font-family: $header-font-family;
 	font-size: $h2-font-size-mobile;
+  font-weight: $h2-font-weight;
 	line-height: $h2-line-height-mobile;
 	margin-top: $h2-margin-top;
 	margin-bottom: $h2-margin-bottom;	
@@ -74,6 +80,7 @@ h2 {
 h3 {
 	font-family: $header-font-family;
 	font-size: $h3-font-size-mobile;
+  font-weight: $h3-font-weight;
 	line-height: $h3-line-height-mobile;
 	margin-top: $h3-margin-top;
 	margin-bottom: $h3-margin-bottom;	
@@ -85,6 +92,7 @@ h3 {
 h4 {
 	font-family: $header-font-family;
 	font-size: $h4-font-size-mobile;
+  font-weight: $h4-font-weight;
 	line-height: $h4-line-height-mobile;
 	margin-top: $h4-margin-top;
 	margin-bottom: $h4-margin-bottom;

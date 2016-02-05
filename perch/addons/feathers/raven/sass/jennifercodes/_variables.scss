@@ -1,8 +1,10 @@
 // Typography
 $headline-sans-serif: 'Oswald', sans-serif;
-$body-sans-serif: 'Roboto', serif;
-$base-font-family: $body-sans-serif;
-$header-font-family: $headline-sans-serif;
+$headline-serif: 'Lato', sans-serif;
+$body-serif: 'Lato', sans-serif;
+$base-font-family: $body-serif;
+$hero-header-font-family: $headline-sans-serif;
+$header-font-family: $headline-serif;
 $base-font-size: 1em;
 
 $modular-scale-ratio: $golden !global;
