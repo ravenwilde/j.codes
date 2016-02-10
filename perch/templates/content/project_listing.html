@@ -15,16 +15,14 @@
 		    </li>
 		    <perch:after></ul></perch:after>
 		</perch:repeater>
-		<h4>Built With:</h4>
+		<h4>Built With...</h4>
 		<perch:repeater id="technologies" label="Technologies Leveraged">
-		    <perch:before><ul></perch:before>
-		    <li>
-		        <perch:content type="text" id="technology" label="Technology"  />
-		    </li>
+		    <perch:before><ul class="tech-tags"></perch:before>
+		    <li><perch:content type="text" id="technology" label="Technology"  /></li>
 		    <perch:after></ul></perch:after>
 		</perch:repeater>
 
-		<a href="/detail/<perch:content id="slug" for="title" type="slug" />">&nbsp;</a>		
+<!-- 		<a href="/detail/<perch:content id="slug" for="title" type="slug" />">&nbsp;</a>		 -->
 	</div>
 
 	

@@ -75,7 +75,7 @@
 		}
 	}
 	p {	
-		font-size: modular-scale(-1, em(42));
+		font-size: modular-scale(-1, rem(42));
 		font-weight: 300;
 		line-height: 1.25;
 		text-align: center;
@@ -83,7 +83,7 @@
 		@include media($x-large-screen-up) {
 			@include span-columns(8);
 			@include shift(2);
-			font-size: em(42);
+			font-size: rem(42);
 		}
 		span {
 			display: block;
@@ -94,21 +94,48 @@
 #skill-links {
 	background-color: $dark-background-color;
 	color: $white;
-	a {
-		color: $white;
+	h3 {
+		@include media($x-large-screen-up) {
+			font-size: modular-scale(1, $h3-font-size);
+		}
 	}
 	h2 {
+		//@extend h3;
+		margin-top: 0;
 		@include span-columns(6);
 		@include media($medium-screen-up) {
 			@include span-columns(10);
 			@include shift(1);
+			margin-top: $h2-margin-top;
+			//margin-bottom: $h2-margin-bottom;
+		}
+		@include media($large-screen-up) {
+		    font-size: $h2-font-size-mobile;
+		}
+		&:after {
+			//content: "...";
 		}
 	}
+
 }
 
 #project-links {
 	border-top: 10px solid darken($dark-background-color, 5);
-	
+	h2 {
+		//color: darken($dark-background-color, 10);
+		border-bottom: 2px solid darken($dark-background-color, 5);
+	}
+	a {
+		@include transition(all 0.1s ease-in-out);
+		color: $white;
+		&:hover {
+			color: $texas-rose;
+		}
+		&:active, &:focus {
+		    color: $texas-rose;
+		    outline: none;
+		}
+	}
 	.projectList {
 		@include media($medium-screen-up) {
 		}
@@ -116,21 +143,62 @@
 }
 
 #skill-links {
+	background-color: $turkish-rose;
+	h2 {
+		border-bottom: 2px solid darken($turkish-rose, 10);
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: $hover-link-color;
+			text-shadow: 0 1px 5px rgba(0,0,0,.2);
+		}
+		&:active, &:focus {
+		    color: $hover-link-color;
+		    outline: none;
+		}
+	}
 	ul {
 		list-style: none;
 		padding: 0;
-		margin: 0;
+		margin: $h2-margin-top 0 $h2-margin-bottom;
+		text-align: center;
 		@include span-columns(6);
 		@include media($medium-screen-up) {
+			margin: $h2-margin-top 0 $h2-margin-bottom * 1.5;
 			@include span-columns(10);
 			@include shift(1);
+		}
+		li {
+			display: inline-block;
+			@extend h3;
+			margin-top: 0;
+			margin-bottom: $h3-margin-bottom / 2;
+			&:first-child:before {
+				content: '...';
+				color: darken($turkish-rose, 10);
+			}
+			&:after {
+				content: '/';
+				color: darken($turkish-rose, 10);
+			}
+			&:last-child:after {
+				content: '...';
+				//color: $white;
+			}
+			@include media($medium-screen-up) {
+				font-size: modular-scale(1, $h3-font-size);
+			}
+			@include media($large-screen-up) {
+				font-size: modular-scale(1, $h3-font-size);
+			}
 		}
 	}
 }
 
 
 #contact-info {
-	border-top: 10px solid darken($dark-background-color, 5);
+	border-top: 10px solid darken($turkish-rose, 10);
 	h2 {
 		text-align: center;
 		@include span-columns(6);
@@ -141,6 +209,10 @@
 	ul {
 		@include span-columns(6);
 		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($x-large-screen-up) {
 			@include span-columns(8);
 			@include shift(2);
 		}

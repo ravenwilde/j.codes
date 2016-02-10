@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Neat 1.7.0
  * http://neat.bourbon.io
  * Copyright 2012-2014 thoughtbot, inc.
@@ -36,7 +37,7 @@ h2 {
       font-size: 2.625rem;
       line-height: 3.25rem; } }
 
-h3 {
+h3, #skill-links ul li {
   font-family: "Lato", sans-serif;
   font-size: 1.625rem;
   font-weight: 400;
@@ -44,7 +45,7 @@ h3 {
   margin-top: 1.625rem;
   margin-bottom: 1.625rem; }
   @media screen and (min-width: 53.75em) {
-    h3 {
+    h3, #skill-links ul li {
       font-size: 1.625rem;
       line-height: 1.625rem; } }
 
@@ -62,7 +63,7 @@ h4 {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: white;
+  background-color: #ffffff;
   color: #202b3a;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
@@ -71,6 +72,7 @@ body {
 h1,
 h2,
 h3,
+#skill-links ul li,
 h4,
 h5,
 h6 {
@@ -78,15 +80,20 @@ h6 {
 
 p {
   margin: 0 0 0.75em; }
+  @media screen and (min-width: 68em) {
+    p {
+      font-size: 1.25rem;
+      line-height: 1.90625rem; } }
 
 a {
-  -webkit-transition: color 0.1s linear;
-  -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   color: #685C79;
   text-decoration: none; }
   a:hover {
-    color: #433b4e; }
+    color: #433b4e;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); }
   a:active, a:focus {
     color: #433b4e;
     outline: none; }
@@ -294,26 +301,29 @@ html, body {
 
 .page-content-wrapper:after {
   content: "";
-  display: block; }
+  display: block;
+  height: 6em; }
 
-footer,
-.page-content-wrapper:after {
-  height: 17em; }
+footer {
+  height: 15em; }
   @media screen and (min-width: 53.75em) {
-    footer,
-    .page-content-wrapper:after {
-      height: 9em; } }
+    footer {
+      height: 11em; } }
 
 @media screen and (min-width: 40em) {
   .skill h1,
   .skill h2,
   .skill h3,
+  .skill #skill-links ul li,
+  #skill-links ul .skill li,
   .skill h4,
   .skill p,
   .skill ul,
   .projects h1,
   .projects h2,
   .projects h3,
+  .projects #skill-links ul li,
+  #skill-links ul .projects li,
   .projects h4,
   .projects p,
   .projects ul {
@@ -325,12 +335,16 @@ footer,
     .skill h1:last-child,
     .skill h2:last-child,
     .skill h3:last-child,
+    .skill #skill-links ul li:last-child,
+    #skill-links ul .skill li:last-child,
     .skill h4:last-child,
     .skill p:last-child,
     .skill ul:last-child,
     .projects h1:last-child,
     .projects h2:last-child,
     .projects h3:last-child,
+    .projects #skill-links ul li:last-child,
+    #skill-links ul .projects li:last-child,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child {
@@ -339,12 +353,16 @@ footer,
   .skill h1,
   .skill h2,
   .skill h3,
+  .skill #skill-links ul li,
+  #skill-links ul .skill li,
   .skill h4,
   .skill p,
   .skill ul,
   .projects h1,
   .projects h2,
   .projects h3,
+  .projects #skill-links ul li,
+  #skill-links ul .projects li,
   .projects h4,
   .projects p,
   .projects ul {
@@ -356,12 +374,16 @@ footer,
     .skill h1:last-child,
     .skill h2:last-child,
     .skill h3:last-child,
+    .skill #skill-links ul li:last-child,
+    #skill-links ul .skill li:last-child,
     .skill h4:last-child,
     .skill p:last-child,
     .skill ul:last-child,
     .projects h1:last-child,
     .projects h2:last-child,
     .projects h3:last-child,
+    .projects #skill-links ul li:last-child,
+    #skill-links ul .projects li:last-child,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child {
@@ -370,12 +392,16 @@ footer,
   .skill h1,
   .skill h2,
   .skill h3,
+  .skill #skill-links ul li,
+  #skill-links ul .skill li,
   .skill h4,
   .skill p,
   .skill ul,
   .projects h1,
   .projects h2,
   .projects h3,
+  .projects #skill-links ul li,
+  #skill-links ul .projects li,
   .projects h4,
   .projects p,
   .projects ul {
@@ -387,12 +413,16 @@ footer,
     .skill h1:last-child,
     .skill h2:last-child,
     .skill h3:last-child,
+    .skill #skill-links ul li:last-child,
+    #skill-links ul .skill li:last-child,
     .skill h4:last-child,
     .skill p:last-child,
     .skill ul:last-child,
     .projects h1:last-child,
     .projects h2:last-child,
     .projects h3:last-child,
+    .projects #skill-links ul li:last-child,
+    #skill-links ul .projects li:last-child,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child {
@@ -401,12 +431,16 @@ footer,
   .skill h1,
   .skill h2,
   .skill h3,
+  .skill #skill-links ul li,
+  #skill-links ul .skill li,
   .skill h4,
   .skill p,
   .skill ul,
   .projects h1,
   .projects h2,
   .projects h3,
+  .projects #skill-links ul li,
+  #skill-links ul .projects li,
   .projects h4,
   .projects p,
   .projects ul {
@@ -418,12 +452,16 @@ footer,
     .skill h1:last-child,
     .skill h2:last-child,
     .skill h3:last-child,
+    .skill #skill-links ul li:last-child,
+    #skill-links ul .skill li:last-child,
     .skill h4:last-child,
     .skill p:last-child,
     .skill ul:last-child,
     .projects h1:last-child,
     .projects h2:last-child,
     .projects h3:last-child,
+    .projects #skill-links ul li:last-child,
+    #skill-links ul .projects li:last-child,
     .projects h4:last-child,
     .projects p:last-child,
     .projects ul:last-child {
@@ -489,13 +527,26 @@ footer,
         .skill .projectList:last-child {
           margin-right: 0; } }
 
+.projectList article {
+  border-bottom: 2px solid #3c506b;
+  padding: 3em 0; }
+  .projectList article::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .projectList article:first-child {
+    padding-top: 0; }
+  .projectList article:last-child {
+    margin-bottom: 0;
+    border-bottom: none; }
 .projectList .project-img {
   float: left;
   display: block;
   margin-right: 6.79902%;
   width: 100%; }
   .projectList .project-img img {
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
   .projectList .project-img:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
@@ -569,11 +620,11 @@ footer,
       width: 65.57075%; }
       .projectList .project-info:last-child {
         margin-right: 0; } }
-  .projectList .project-info h3 {
-    margin-top: 0; }
-    .projectList .project-info h3 span {
-      font-size: 1.00433rem;
-      display: block; }
+  .projectList .project-info h3 span, .projectList .project-info #skill-links ul li span, #skill-links ul .projectList .project-info li span {
+    font-size: 1.00433rem;
+    display: block; }
+  .projectList .project-info h4 {
+    margin-bottom: 0; }
   .projectList .project-info p {
     font-weight: 300; }
     .projectList .project-info p span {
@@ -584,8 +635,19 @@ footer,
     padding: 0;
     font-weight: 900; }
     .projectList .project-info ul a:after {
-      content: ">";
+      content: "→";
       margin-left: .25em; }
+    .projectList .project-info ul.tech-tags {
+      margin-top: 0; }
+      .projectList .project-info ul.tech-tags li {
+        display: inline-block;
+        margin: 0 .25em 0 0; }
+        .projectList .project-info ul.tech-tags li:after {
+          content: "/";
+          color: #33445a;
+          margin-left: .25em; }
+        .projectList .project-info ul.tech-tags li:last-child:after {
+          content: ""; }
 
 .codeSampleList {
   list-style: none;
@@ -600,7 +662,7 @@ footer,
 footer {
   background-color: #202b3a;
   color: #a6aab0;
-  text-align: right; }
+  text-align: center; }
 
 #hero .vertical-center {
   float: left;
@@ -741,7 +803,7 @@ footer {
   #hero h1 span:last-child {
     display: block; }
 #hero p {
-  font-size: 1.62237em;
+  font-size: 1.62237rem;
   font-weight: 300;
   line-height: 1.25;
   text-align: center;
@@ -758,7 +820,7 @@ footer {
       margin-right: 3.28774%;
       width: 65.57075%;
       margin-left: 17.21462%;
-      font-size: 2.625em; }
+      font-size: 2.625rem; }
       #hero p:last-child {
         margin-right: 0; } }
   #hero p span {
@@ -768,11 +830,14 @@ footer {
 #skill-links {
   background-color: #455C7B;
   color: #ffffff; }
-  #project-links a,
-  #skill-links a {
-    color: #ffffff; }
+  @media screen and (min-width: 60.625em) {
+    #project-links h3, #project-links #skill-links ul li, #skill-links ul #project-links li,
+    #skill-links h3,
+    #skill-links ul li {
+      font-size: 2.62925rem; } }
   #project-links h2,
   #skill-links h2 {
+    margin-top: 0;
     float: left;
     display: block;
     margin-right: 6.79902%;
@@ -787,36 +852,85 @@ footer {
         display: block;
         margin-right: 3.28774%;
         width: 82.78538%;
-        margin-left: 8.60731%; }
+        margin-left: 8.60731%;
+        margin-top: 1.625rem; }
         #project-links h2:last-child,
         #skill-links h2:last-child {
           margin-right: 0; } }
+    @media screen and (min-width: 53.75em) {
+      #project-links h2,
+      #skill-links h2 {
+        font-size: 1.62237rem; } }
 
 #project-links {
   border-top: 10px solid #3c506b; }
+  #project-links h2 {
+    border-bottom: 2px solid #3c506b; }
+  #project-links a {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    color: #ffffff; }
+    #project-links a:hover {
+      color: #FFAA5C; }
+    #project-links a:active, #project-links a:focus {
+      color: #FFAA5C;
+      outline: none; }
 
-#skill-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  float: left;
-  display: block;
-  margin-right: 6.79902%;
-  width: 100%; }
-  #skill-links ul:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 40em) {
-    #skill-links ul {
-      float: left;
-      display: block;
-      margin-right: 3.28774%;
-      width: 82.78538%;
-      margin-left: 8.60731%; }
-      #skill-links ul:last-child {
-        margin-right: 0; } }
+#skill-links {
+  background-color: #AC6C82; }
+  #skill-links h2 {
+    border-bottom: 2px solid #925369; }
+  #skill-links a {
+    color: #ffffff; }
+    #skill-links a:hover {
+      color: #433b4e;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); }
+    #skill-links a:active, #skill-links a:focus {
+      color: #433b4e;
+      outline: none; }
+  #skill-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.625rem 0 3.25rem;
+    text-align: center;
+    float: left;
+    display: block;
+    margin-right: 6.79902%;
+    width: 100%; }
+    #skill-links ul:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 40em) {
+      #skill-links ul {
+        margin: 1.625rem 0 4.875rem;
+        float: left;
+        display: block;
+        margin-right: 3.28774%;
+        width: 82.78538%;
+        margin-left: 8.60731%; }
+        #skill-links ul:last-child {
+          margin-right: 0; } }
+    #skill-links ul li {
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0.8125rem; }
+      #skill-links ul li:first-child:before {
+        content: '...';
+        color: #925369; }
+      #skill-links ul li:after {
+        content: '/';
+        color: #925369; }
+      #skill-links ul li:last-child:after {
+        content: '...'; }
+      @media screen and (min-width: 40em) {
+        #skill-links ul li {
+          font-size: 2.62925rem; } }
+      @media screen and (min-width: 53.75em) {
+        #skill-links ul li {
+          font-size: 2.62925rem; } }
 
 #contact-info {
-  border-top: 10px solid #3c506b; }
+  border-top: 10px solid #925369; }
   #contact-info h2 {
     text-align: center;
     float: left;
@@ -843,6 +957,15 @@ footer {
     #contact-info ul:last-child {
       margin-right: 0; }
     @media screen and (min-width: 40em) {
+      #contact-info ul {
+        float: left;
+        display: block;
+        margin-right: 3.28774%;
+        width: 82.78538%;
+        margin-left: 8.60731%; }
+        #contact-info ul:last-child {
+          margin-right: 0; } }
+    @media screen and (min-width: 60.625em) {
       #contact-info ul {
         float: left;
         display: block;
