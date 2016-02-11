@@ -16,23 +16,4 @@
 			<?php perch_content('Gist Links'); ?>		
 		</div>
 	</section>
-	<section>
-		<div class="container">
-		    <?php 
-				perch_content_create('Skill', array(
-			      'template'  => 'category_skill.html',
-			      'edit-mode' => 'singlepage',
-					));
-				perch_content_custom('Skill', array(
-					'template' => 'category_skill.html'	
-					));
-
-				perch_content_custom('Project', array(
-			        'template' => 'project_listing.html',
-			        'page'=>'/projects.php',
-			        'category' => 'skills/php',
-		      		));
-		    ?>
-		</div>
-	</section>
 <?php perch_layout('global.footer'); ?>

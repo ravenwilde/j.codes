@@ -1,6 +1,8 @@
 *.DS_Store
 /bower_components/*
 /node_modules/*
+perch/addons/feathers/raven/node_modules/
+perch/addons/feathers/raven/bower_components/
 .sass-cache
 /img/art/*
 /img/*

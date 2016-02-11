@@ -1,0 +1,262 @@
+//----------------
+// General
+body {
+	//@include highlight-breakpoint;
+	border-top: 30px solid darken($dark-background-color, 20);
+}
+header,
+section {
+	clear: both;
+	@include clearfix;
+}
+.container {
+	@include outer-container;
+	padding: $base-spacing ($base-spacing/2);
+	@include media($tablet-small-screen-up) {
+		padding: $base-spacing $base-spacing;
+	}
+	header & {
+		padding-bottom: 0;
+	}
+}
+.colorbar {
+	width: 100%;
+	@include clearfix;
+	div {
+		display: inline-block;
+		float: left;
+		width: 20%;
+		height: $base-spacing;
+		margin: 0;
+		@for $i from 1 through 5 {
+		    &:nth-child(#{$i}) {
+				background-color: map-get($color-map, $i);
+		    }				
+		}
+	}
+}
+.page-content-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+html, body {
+ height: 100%;
+}
+
+.page-content-wrapper:after {
+  content: "";
+  display: block;
+  height: 6em;
+}
+
+footer {
+  height: 16em;
+
+  @include media($large-screen) {
+    height: 15em;
+  }
+}
+//----------------
+// General Page Layouts
+.skill,
+.projects {
+	h1,
+	h2,
+	h3,
+	h4, 
+	p,
+	ul {
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(7);
+			@include shift(2);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(6);
+			@include shift(2);
+		}
+	}
+}
+footer .container {
+	h4,
+	h5 {
+		text-align: center;
+		margin-bottom: 0;
+		@include media($medium-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}	
+	}
+}
+.projectList {
+	@include span-columns(6);
+	@include media($medium-screen-up) {
+		@include span-columns(10);
+		@include shift(1);
+	}
+	// .projects & {
+	// 	@include span-columns(6);
+	// 	@include media($medium-screen-up) {
+	// 		@include span-columns(10);
+	// 		@include shift(1);
+	// 	}
+	// }
+	.skill & {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			@include shift(2);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(7);
+			@include shift(2);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(6);
+			@include shift(2);
+		}
+	}
+}
+//----------------
+// Project Listing
+.projectList {
+	article {
+		@include clearfix;
+		border-bottom: 2px solid darken($dark-background-color, 5);
+		padding: $base-spacing * 2 0;
+		&:first-child {
+			padding-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: none;
+		}
+	}
+	.project-img {
+		img {
+			width: 100%;
+			//border: 4px solid darken($dark-background-color, 5);
+			@include card(1);
+		}
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(12);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(4);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(4);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(4);
+		}
+	}
+	.project-info {
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(12);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(8);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(8);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(8);
+		}
+		h3 {
+			//margin-top: 0;
+			span {
+				font-size: modular-scale(-1, $h3-font-size);
+				display: block;
+			}
+		}
+		h4 {
+			margin-bottom: 0;
+		}
+		p {
+			font-weight: 300;
+			@include media($large-screen-up) {
+			}
+			span {
+				font-size: modular-scale(-1, $h3-font-size);
+				display: block;
+				
+			}
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			font-weight: 900;
+			a:after {
+				content: "→";
+				margin-left: .25em;
+			}
+			&.tech-tags {
+					margin-top: 0;
+					li {
+						display: inline-block;
+						margin: 0 .25em 0 0;
+						&:after {
+							content: "/";
+							color: darken($dark-background-color, 10);
+							margin-left: .25em;
+						}
+						&:last-child:after {
+							content: "";
+						}	
+					}
+				}
+		}
+	}
+}
+//----------------
+// Code Sample Links
+.codeSampleList {
+	list-style: none;
+	padding: 0;
+	&_viewLink {
+		display: block;
+		margin: ($base-spacing/2) 0;
+		a:after {
+			content: "→";
+			margin-left: .25em;
+		}
+	}
+}
+
+//----------------
+// Footer
+footer {
+	background-color: darken($dark-background-color, 20);
+	color: tint(darken($dark-background-color, 20), 60);
+	text-align: center;
+}

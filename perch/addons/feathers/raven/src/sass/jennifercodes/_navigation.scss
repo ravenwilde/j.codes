@@ -23,7 +23,15 @@ nav.global-nav-skills {
 		padding: ($base-spacing/2);
 		text-align: center;
 		color: $global-navigation-color;
-		font-weight: 300;
+		font-weight: 400;
+		&:hover {
+			color: $hover-link-color;
+			text-shadow: 0 1px 2px rgba(0,0,0,.2);
+		}
+		&:active, &:focus {
+		    color: $hover-link-color;
+		    outline: none;
+		}
 		@include media($medium-screen-up) {
 			text-align: left;
 		}
@@ -35,16 +43,50 @@ nav.global-nav {
 	border-top: 5px solid $light-accent-color;
 	//border-bottom: 5px solid $light-accent-color;
 	// line-height:2.5;
-	li {
+	ul {
 		@include span-columns(3);
 		@include media($medium-screen-up) {
-			width: auto;
+			@include span-columns(3);
+		}
+	}
+	li {
+		@include span-columns(3 of 3);
+		@include media($medium-screen-up) {
+			@include span-columns(3 of 3);
+		}
+		&:first-child {
+			a {
+				@include media($medium-screen-up) {
+					padding-left: 0;
+					&:before {
+						content: "←";
+						margin-right: .25em;
+					}
+				}
+			}
 		}
 	}
 	a {
 		font-size: 1.2em;
 		@include media($tablet-small-screen-up) {
 			font-size: 1.5em;
+		}
+	}
+	.menu-toggle {
+		@include span-columns(3);
+		//text-align: left;
+		//padding-left: 20%;
+		// &:hover {
+		// 		color: $white;
+		// 		text-shadow: none;
+		// 	}
+		@include media($medium-screen-up) {
+			display: none;
+			// @include span-columns(2);
+			// text-align: right;
+			// cursor: default;
+			// padding-left: 0;
+			
 		}
 	}
 }
@@ -57,25 +99,12 @@ nav.global-nav-skills {
 	// li {
 	// 	line-height: 1;
 	// }
-	.menu-toggle {
-		@include span-columns(6);
-		text-align: left;
-		padding-left: 20%;
-		@include media($medium-screen-up) {
-			@include span-columns(2);
-			text-align: right;
-			cursor: default;
-			padding-left: 0;
-			&:hover {
-				color: $blue;
-			}
-		}
-	}
 	ul {
-		@include span-columns(6);
+		//@include span-columns(6);
 		display: none;
 		@include media($medium-screen-up) {
 			@include span-columns(10);
+			@include shift(1);
 		}
 		&.active {
 			display: block;
@@ -86,7 +115,12 @@ nav.global-nav-skills {
 	}
 	li {
 		@include span-columns(6);
+		border-top: 2px solid darken($turkish-rose, 10);
+		&:first-child {
+			border-top: none;
+		}
 		@include media($medium-screen-up) {
+			border: none;
 			width: auto;
 			float: left;
 		}
@@ -94,5 +128,10 @@ nav.global-nav-skills {
 	a {
 		font-size: 1.2em;
 		line-height: 1;
+	}
+	&.active {
+		ul {
+			display: block;
+		}
 	}
 }

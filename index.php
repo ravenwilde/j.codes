@@ -20,27 +20,26 @@
 		<p>I am a web designer &amp; developer <span>located in Ann Arbor, MI</span></p>
 	</div>
 </section>
-<section id="skill-links">
-	<div class="container">
-		<h2>I help build the internet with...</h2>
-	<?php 
-		perch_pages_navigation(array(
-			  'navgroup' =>'skills',
-			  'levels' => 1
-			));
-	?>
-	</div>
-</section>
 <section id="project-links">
 	<div class="container">
-		<h2>... and I've got some stuff to share with you!</h2>
-	<?php 
-		 perch_content_custom('Project', array(
-	      'page' => '/projects.php',
-	      'template' => 'project_listing.html'
-	    ));
-	?>
-	<p class="all-projects-link"><a href="projects">View All Projects</a></p>
+		<h2>Selected Work</h2>
+		<?php 
+			perch_content_custom('Project', array(
+		      'page' => '/projects.php',
+		      'template' => 'project_listing.html'
+		    ));
+		?>
+	</div>
+</section>
+<section id="skill-links">
+	<div class="container">
+		<h2>Selected Code Samples</h2>
+		<?php 
+			perch_pages_navigation(array(
+				  'navgroup' =>'skills',
+				  'levels' => 1
+				));
+		?>
 	</div>
 </section>
 <section id="contact-info">

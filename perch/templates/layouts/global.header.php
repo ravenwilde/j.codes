@@ -25,6 +25,7 @@
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#202B3A">
 	<!-- /favicon -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,300|Oswald">
 	<?php 
 		perch_page_attributes();	
 		perch_get_css(); 

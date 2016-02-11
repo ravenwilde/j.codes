@@ -75,7 +75,7 @@
 		}
 	}
 	p {	
-		font-size: modular-scale(-1, em(42));
+		font-size: modular-scale(-1, rem(42));
 		font-weight: 300;
 		line-height: 1.25;
 		text-align: center;
@@ -83,188 +83,135 @@
 		@include media($x-large-screen-up) {
 			@include span-columns(8);
 			@include shift(2);
-			font-size: em(42);
+			font-size: rem(42);
 		}
 		span {
 			display: block;
 		}
 	}
 }
-
+#project-links,
 #skill-links {
-	//background-color: $light-background-color;
+	background-color: $dark-background-color;
+	color: $white;
+	h3 {
+		@include media($x-large-screen-up) {
+			font-size: modular-scale(1, $h3-font-size);
+		}
+	}
 	h2 {
-		margin-right: ($base-spacing/4);
-		margin-left: ($base-spacing/4);
+		//@extend h3;
+		margin-top: 0;
 		@include span-columns(6);
 		@include media($medium-screen-up) {
 			@include span-columns(10);
 			@include shift(1);
+			margin-top: $h2-margin-top;
+			//margin-bottom: $h2-margin-bottom;
 		}
-	}
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li {
-			font-size: $h2-font-size-mobile;
-			line-height: $h2-line-height-mobile;
-			text-align: left;
-			color: $white;
-			margin-bottom: ($base-spacing/2);
-			@include media($medium-screen-up) {
-				@include omega;
-			}
-			@include media($large-screen-up) {
-				font-size: $h2-font-size;
-				line-height: $h2-line-height;
-			}
-			&:nth-child(1) {
-				@include span-columns(6);
-				@include media($medium-screen-up) {
-					@include span-columns(6);
-					@include shift(6);
-				}
-				a {
-					@include span-columns(6);
-					@include media($medium-screen-up) {
-						@include span-columns(8);						
-					}
-				}
-			}
-			&:nth-child(2) {
-				@include span-columns(6);
-				@include media($medium-screen-up) {
-					@include span-columns(8);
-					@include shift(4);
-				}
-				a {
-					@include span-columns(6);
-					@include media($medium-screen-up) {
-						@include span-columns(6);						
-					}
-				}
-			}
-			&:nth-child(3) {
-				@include span-columns(6);
-				@include media($medium-screen-up) {
-					@include span-columns(6);
-					@include shift(1);
-				}
-				a {
-					@include span-columns(6);
-					@include media($medium-screen-up) {
-						@include span-columns(8);						
-					}
-				}
-			}
-			&:nth-child(4) {
-				@include span-columns(6);
-				@include media($medium-screen-up) {
-					@include span-columns(6);
-					@include shift(3);
-				}
-				a {
-					@include span-columns(6);
-					@include media($medium-screen-up) {
-						@include span-columns(7);						
-					}
-				}
-			}
-			&:nth-child(5) {
-				@include span-columns(6);
-				@include media($medium-screen-up) {
-					@include span-columns(6);
-					@include shift(5);
-				}
-				a {
-					@include span-columns(6);
-					@include media($medium-screen-up) {
-						@include span-columns(11);						
-					}
-				}
-			}
-			@for $i from 1 through 6 {
-			    &:nth-child(#{$i}) {
-					a {
-						@include transition(all 0.2s ease-out);
-						background-color: map-get($color-map, $i);
-						&:hover {
-							opacity: .9;
-						}
-					}
-			    }				
-			}
-			a {
-				color: $white;
-				text-align: center;
-				border-radius: 1em;
-			}
+		@include media($large-screen-up) {
+		    font-size: $h2-font-size-mobile;
+		}
+		&:after {
+			//content: "...";
 		}
 	}
 }
 
 #project-links {
-	//background-color: $dark-background-color;
+	border-top: 10px solid darken($dark-background-color, 5);
 	h2 {
-		text-align: right;
-		@include span-columns(5);
-		@include shift(1);
-		@include media($medium-screen-up) {
-			@include span-columns(7);
-			@include shift(4);
+		//color: darken($dark-background-color, 10);
+		border-bottom: 2px solid darken($dark-background-color, 5);
+	}
+	a {
+		@include transition(all 0.1s ease-in-out);
+		color: $white;
+		&:hover {
+			color: $texas-rose;
+		}
+		&:active, &:focus {
+		    color: $texas-rose;
+		    outline: none;
 		}
 	}
 	.projectList {
-		@include span-columns(6);
 		@include media($medium-screen-up) {
-			@include span-columns(10);
-			@include shift(1);
-		}
-	}
-	p.all-projects-link {
-		margin-top: $base-spacing;
-		margin-bottom: $base-spacing;
-		@include span-columns(6);
-		text-align: center;
-		@include media($medium-screen-up) {
-			@include span-columns(4);
-			@include shift(4);
-			text-align: center;
-		}
-		a {
-			display: block;
-			width: 100%; 
-			padding: ($base-spacing/2) 0;
-			color: $white;
-			font-size: modular-scale(1);
-			font-weight: 300;
-			text-transform: uppercase;
-			background-color: darken($middle-background-color, 10);
-			border-radius: 1em;
-			@include transition(all 0.2s ease-out);
-			&:hover {
-				opacity: .9;
-				color: $white;
-			}
-			@include media($medium-screen-up) {
-				padding: ($base-spacing/4) $gutter;
-			}
 		}
 	}	
 }
 
-#contact-info {
+#skill-links {
+	background-color: $turkish-rose;
 	h2 {
+		border-bottom: 2px solid darken($turkish-rose, 10);
+	}
+	a {
+		color: $white;
+		&:hover {
+			color: $hover-link-color;
+			text-shadow: 0 1px 5px rgba(0,0,0,.2);
+		}
+		&:active, &:focus {
+		    color: $hover-link-color;
+		    outline: none;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: $h2-margin-top 0 $h2-margin-bottom;
+		text-align: center;
 		@include span-columns(6);
 		@include media($medium-screen-up) {
+			margin: $h2-margin-top 0 $h2-margin-bottom * 1.5;
 			@include span-columns(10);
 			@include shift(1);
+		}
+		li {
+			display: inline-block;
+			@extend h3;
+			margin-top: 0;
+			margin-bottom: $h3-margin-bottom / 2;
+			&:first-child:before {
+				content: '...';
+				color: darken($turkish-rose, 10);
+			}
+			&:after {
+				content: '/';
+				color: darken($turkish-rose, 10);
+			}
+			&:last-child:after {
+				content: '...';
+				//color: $white;
+			}
+			@include media($medium-screen-up) {
+				font-size: modular-scale(1, $h3-font-size);
+			}
+			@include media($large-screen-up) {
+				font-size: modular-scale(1, $h3-font-size);
+			}
+		}
+	}
+}
+
+
+#contact-info {
+	border-top: 10px solid darken($turkish-rose, 10);
+	h2 {
+		text-align: center;
+		@include span-columns(6);
+		@include media($medium-screen-up) {
+			@include span-columns(12);
 		}
 	}
 	ul {
 		@include span-columns(6);
 		@include media($medium-screen-up) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+		@include media($x-large-screen-up) {
 			@include span-columns(8);
 			@include shift(2);
 		}

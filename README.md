@@ -1,7 +1,7 @@
 # j.codes
 Personal Portfolio Site
 
-## Planned site architecture:
+## Site architecture:
 
 * /index - homepage with contact info, links to other pages.
 
