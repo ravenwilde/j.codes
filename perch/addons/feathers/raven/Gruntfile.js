@@ -30,9 +30,10 @@ module.exports = function(grunt) {
 		    roundingPrecision: -1
 		  },
 		  target: {
-		    files: {
-		      'css/normalize.min.css': 'src/css/normalize.css'
-		    }
+		    files: [
+		    	{'css/normalize.min.css': 'src/css/normalize.css'},
+		    	{'css/style.min.css': 'css/style.css'}
+	    	]
 		  }
 		},
 		uglify: {

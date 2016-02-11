@@ -23,14 +23,14 @@ class PerchFeather_Raven extends PerchFeather
 		// 			'href'=>$this->path.'/bower_components/photoswipe/dist/default-skin/default-skin.min.css',
 		// 			'type'=>'text/css'
 		// 		));
+		// $out[] = $this->_single_tag('link', array(
+		// 			'rel'=>'stylesheet',
+		// 			'href'=>'//fonts.googleapis.com/css?family=Lato:400,300|Oswald',
+		// 			'type'=>'text/css'
+		// 		));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
-					'href'=>'//fonts.googleapis.com/css?family=Lato:400,300|Oswald',
-					'type'=>'text/css'
-				));
-		$out[] = $this->_single_tag('link', array(
-					'rel'=>'stylesheet',
-					'href'=>$this->path.'/css/style.css',
+					'href'=>$this->path.'/css/style.min.css',
 					'type'=>'text/css'
 				));
 		
