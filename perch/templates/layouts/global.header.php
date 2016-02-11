@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>jennifer.codes<?php perch_layout_var('title'); ?></title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,300|Oswald">
+	<?php 
+		perch_page_attributes();	
+		perch_get_css(); 
+	?>
 	<!-- favicon -->
 	<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -25,11 +30,6 @@
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 	<meta name="theme-color" content="#202B3A">
 	<!-- /favicon -->
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:400,300|Oswald">
-	<?php 
-		perch_page_attributes();	
-		perch_get_css(); 
-	?>
 </head>
 <body class="<?php perch_layout_var('body-class'); ?>">
 <div class="page-content-wrapper">
