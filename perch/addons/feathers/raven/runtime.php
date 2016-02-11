@@ -28,11 +28,6 @@ class PerchFeather_Raven extends PerchFeather
 					'href'=>'//fonts.googleapis.com/css?family=Lato:400,300|Oswald',
 					'type'=>'text/css'
 				));
-		// $out[] = $this->_single_tag('link', array(
-		// 			'rel'=>'stylesheet',
-		// 			'href'=>'//fonts.googleapis.com/css?family=Oswald:300',
-		// 			'type'=>'text/css'
-		// 		));
 		$out[] = $this->_single_tag('link', array(
 					'rel'=>'stylesheet',
 					'href'=>$this->path.'/css/style.css',
@@ -53,12 +48,12 @@ class PerchFeather_Raven extends PerchFeather
 	{
 		$out = array();
 		
-		if (!$this->component_registered('jquery')) {
-			$out[] = $this->_script_tag(array(
-				'src'=>$this->path.'/js/jquery-1.8.2.min.js'
-			));
-			$this->register_component('jquery');
-		}
+		// if (!$this->component_registered('jquery')) {
+		// 	$out[] = $this->_script_tag(array(
+		// 		'src'=>$this->path.'/js/jquery-1.8.2.min.js'
+		// 	));
+		// 	$this->register_component('jquery');
+		// }
 
 		// if (!$this->component_registered('photoswipe')) {
 		// 	$out[] = $this->_script_tag(array(
@@ -90,8 +85,6 @@ class PerchFeather_Raven extends PerchFeather
 
 		return implode("\n\t", $out)."\n";
 	}
-
-
 }
 
 

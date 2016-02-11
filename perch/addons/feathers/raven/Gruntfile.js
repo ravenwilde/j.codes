@@ -8,22 +8,40 @@ module.exports = function(grunt) {
 			        style: 'expanded'
 			    },
 				files: {
-					'build/assets/css/app.css' : 'src/sass/app.scss'
+					'css/style.css' : 'src/sass/style.scss'
 				}
 			}
 		},
-		//copy: { 
-	    //  main: {
-	    //    files: [
-	          // {
-	          //   expand: true, 
-	          //   cwd: 'bower_components/bootstrap-sass/assets/javascripts',
-	          //   src: ['**'], 
-	          //   dest: 'lib/js'
-	          // }
-	    //    ],
-	    //  },
-	    //},
+		copy: { //run after bower updates
+	     main: {
+	       files: [
+	          {
+	            expand: true, 
+	            cwd: 'bower_components/normalize.css',
+	            src: ['normalize.css'], 
+	            dest: 'src/css'
+	          }
+	       ],
+	     },
+	    },
+	    cssmin: {
+		  options: {
+		    shorthandCompacting: false,
+		    roundingPrecision: -1
+		  },
+		  target: {
+		    files: {
+		      'css/normalize.min.css': 'src/css/normalize.css'
+		    }
+		  }
+		},
+		uglify: {
+		    my_target: {
+		      files: {
+		        'js/app.min.js': ['src/js/app.js']
+		      }
+			}
+		},
 		watch: {
 			css: {
 				files: '**/*.scss',
@@ -34,6 +52,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.registerTask('default',['watch']);
 }

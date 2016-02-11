@@ -56,7 +56,7 @@ footer {
   height: 16em;
 
   @include media($large-screen) {
-    height: 11em;
+    height: 15em;
   }
 }
 //----------------
@@ -85,6 +85,29 @@ footer {
 			@include span-columns(6);
 			@include shift(2);
 		}
+	}
+}
+footer .container {
+	h4,
+	h5 {
+		text-align: center;
+		margin-bottom: 0;
+		@include media($medium-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+		@include media($large-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+		@include media($xx-large-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+		@include media($super-large-screen-up) {
+			@include span-columns(12);
+			@include shift(0);
+		}	
 	}
 }
 .projectList {
@@ -214,7 +237,6 @@ footer {
 				}
 		}
 	}
-
 }
 //----------------
 // Code Sample Links
@@ -225,7 +247,7 @@ footer {
 		display: block;
 		margin: ($base-spacing/2) 0;
 		a:after {
-			content: ">";
+			content: "→";
 			margin-left: .25em;
 		}
 	}
